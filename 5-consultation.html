@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Fiche 5 : Consultation - Guide du concepteur RGAA 3</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="css/styles.css" media="all">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <script type="text/javascript" src="highlight/highlight.pack.js"></script>
+  <link rel="stylesheet" href="highlight/styles/tomorrow-night-eighties.css" media="all">
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<div class="main-header">
+	<div class="inside">
+		<ul class="skip-links">
+			<li><a href="#main">contenu</a></li>
+			<li><a href="#navigation">navigation</a></li>
+		</ul>
+		<header role="banner" class="header  clear" id="banner">
+			<h1 class="title">Guide du concepteur RGAA&nbsp;3</h1>
+		</header>
+
+		<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+			<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+			<ul class="sommaire is-hidden" id="sommaireToggle">
+				<li><a href="index.html">Introduction</a></li>
+				<li>
+					<a href="conception-fonctionnelle.html">Conception fonctionnelle</a>
+					<ul>
+						<li><a href="1-images.html">Fiche 1&nbsp;: Images</a></li>
+						<li><a href="2-tableaux.html">Fiche 2&nbsp;: Tableaux</a></li>
+						<li><a href="3-formulaires.html">Fiche 3&nbsp;: Formulaires</a></li>
+						<li><a href="4-navigation.html">Fiche 4&nbsp;: Navigation</a></li>
+						<li><a href="5-consultation.html">Fiche 5&nbsp;: Consultation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-graphique.html">Conception graphique</a>
+					<ul>
+						<li><a href="6-couleurs.html">Fiche 6&nbsp;: Couleurs</a></li>
+						<li><a href="7-presentation.html">Fiche 7&nbsp;: Présentation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-multimedia.html">Conception multimédia</a>
+					<ul>
+						<li><a href="8-multimedia.html">Fiche 8&nbsp;: Multimédia</a></li>
+					</ul>
+				</li>
+				<li><a href="glossaire.html">Glossaire</a></li>
+			</ul>
+		</nav>
+		<div class="github-link">
+			<p><a href="https://github.com/DISIC/guide-concepteur">Contribuer</a>
+			<a class="pdfdown" title="Télécharger le Guide du concepteur RGAA 3 (pdf, 1,6 Mo)" href="export/guide-concepteurs.pdf">Télécharger</a></p>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+
+	<nav role="navigation" class="internav clear">
+		<ul>
+			<li><a class="prev" href="4-navigation.html"><span aria-hidden="true"> &laquo; </span>Fiche 4&nbsp;: Navigation </a></li>
+			<li><a class="next" href="conception-graphique.html">Conception graphique <span aria-hidden="true"> &raquo; </span></a></li>
+		</ul>
+	</nav>
+
+	<main id="main" role="main">
+		<h1 class="fiche-title">Fiche 5&nbsp;: Consultation</h1>
+
+		<div class="bloc-haut">
+			<ul class="nav-context">			
+				<li><a href="#introduction">Introduction - cas utilisateurs</a></li>
+				<li><a href="#fichierstelechargement">Fichiers en téléchargement</a></li>
+				<li><a href="#expressionsinhabituelles">Expressions inhabituelles ou idiomatiques, jargon</a></li>
+				<li><a href="#textescomplexes">Textes complexes</a></li>
+				<li><a href="#ailleurs">Voir ailleurs / Ressources</a></li>
+				<li><a href="#criteres">Critères RGAA 3</a></li>
+			</ul>
+	
+			<aside role="complementary" class="clear resume">
+				<h2 id="resume">Synthèse</h2>
+				<ul>
+					<li>Indiquer le poids, le format et la langue de chaque fichier téléchargeable.</li>
+					<li>Créer un glossaire pour les expressions inhabituelles, les expressions idiomatiques ou le jargon.</li>
+					<li>Proposer une alternative aux textes nécessitant un niveau de lecture avancé.</li>
+				</ul>
+			</aside>
+		</div>
+
+		<article class="article" id="introduction">
+			<h2>Introduction - cas utilisateurs</h2>
+			<p>L’accessibilité des documents en téléchargement relève des mêmes enjeux que l’accessibilité d’un contenu web. Chaque document doit être correctement structuré avec des titres, des listes, etc. pour permettre aux utilisateurs de pouvoir naviguer et de se repérer aisément. Toutes les autres problématiques s’appliquent également&nbsp;: les descriptions d’images, les tableaux, les couleurs, les liens, etc.</p>
+			<p>L’absence d’accessibilité des fichiers en téléchargement est toujours un problème grave qui empêche l’accès à l’information. Les principaux utilisateurs impactés sont les utilisateurs aveugles, malvoyants ou ayant des difficultés de lecture.</p>
+			<p>Si votre site est accessible, mais qu’une partie de l’information est transmise à vos utilisateurs via des documents bureautiques (.doc, .pdf, etc.) non accessibles, votre contenu n’est pas accessible. Vous empêchez alors des utilisateurs d’accéder à cette information.</p>
+			<p>Par ailleurs, les expressions inhabituelles, les expressions idiomatiques et le jargon empêchent les utilisateurs handicapés mentaux de comprendre un texte, si ces éléments de langage ne sont pas définis ou accompagnés d’une alternative en langage courant.</p>
+		</article>
+
+		<article class="article" id="fichierstelechargement">
+			<h2>Fichiers en téléchargement</h2>
+			<p>Lorsqu’un fichier en téléchargement est proposé dans une page web, il faut indiquer les informations nécessaires à sa consultation, telles que&nbsp;:</p>
+			<ul>
+				<li>le poids du fichier&nbsp;;</li>
+				<li>le format du fichier&nbsp;;</li>
+				<li>la langue du fichier, si elle diffère de la langue de la page.</li>
+			</ul>
+			<p>La solution la plus simple et la plus accessible est d’indiquer ces données dans l’intitulé du lien qui permet de télécharger le fichier, par exemple : «&nbsp;Télécharger le guide du concepteur RGAA&nbsp;3 (PDF, 1 Mo)&nbsp;». Mais ces informations supplémentaires peuvent également se trouver dans le <a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#contexte-du-lien">contexte du lien</a>.</p>
+			<p>Les documents en téléchargement doivent être accessibles, sauf si leur contenu est déjà accessible ailleurs sur le site, par exemple si le document n’est qu’une version imprimable du contenu de la page. Autrement, si les documents en téléchargement ne sont pas accessibles, ils doivent disposer d’une version alternative accessible, clairement identifiable (par exemple un lien adjacent). Il faut donc prévoir la réalisation de versions alternatives accessibles de ces documents. Par exemple, cela peut prendre la forme d’une page HTML qui reprend le contenu intégral du document téléchargeable. Il ne sera pas nécessaire de styler ces pages, dans la mesure où elles s’adressent aux utilisateurs aveugles.</p>
+		</article>
+
+		<article class="article" id="expressionsinhabituelles">
+			<h2>Expressions inhabituelles ou idiomatiques, jargon</h2>
+			<p>Les éléments de jargon et expressions inhabituelles sont un réel frein à la compréhension pour les utilisateurs handicapés mentaux s’ils ne sont pas définis ou accompagnés d’une alternative en langage courant.</p>
+			<p>Ainsi, il peut être utile de prévoir la création d’un glossaire pour lister et expliciter les expressions inhabituelles et le jargon spécifique d’un site. Ce glossaire doit être accessible depuis toutes les pages du site.</p>
+			<p>Il s’agit cependant d’un critère de niveau AAA, qui n’a pas de caractère obligatoire, bien que sa mise en œuvre puisse améliorer considérablement l’expérience des utilisateurs handicapés mentaux.</p>
+		</article>
+
+		<article class="article" id="textescomplexes">
+			<h2>Textes complexes</h2>
+			<p>Pour faciliter la compréhension des textes qui nécessitent un niveau de lecture plus avancé que le premier cycle de l’enseignement secondaire, on peut prévoir un certain nombres d’outils et de méthodes&nbsp;:</p>
+			<ul>
+				<li>une iconographie de soutien (illustrations ou symboles graphiques) adaptés au niveau de lecture du premier cycle de l’enseignement secondaire&nbsp;;</li>
+				<li>une version en Langue des signes (<abbr>LSF</abbr>). Voir un exemple de texte traduit en LSF sur l’<a href="http://infos-parents-accessibles.education.gouv.fr/pid35173/fournitures-scolaires.html">article «&nbsp;Fournitures scolaires&nbsp;» du site Infos-Parents du Ministère de l’Éducation nationale</a> (activer l’option «&nbsp;Activer la langue des signes&nbsp;»)&nbsp;;</li>
+				<li>une version Facile À Lire et à Comprendre (<abbr>FALC</abbr>). <a href="http://www.unapei-lr.org/articles-6/42-101-les-regles-du-facile-a-lire-et-a-comprendre-falc/">Consulter les règles du FALC</a>&nbsp;;</li>
+				<li>une version vocalisée du texte&nbsp;;</li>
+				<li>un résumé adapté au niveau de lecture du premier cycle de l’enseignement secondaire&nbsp;;</li>
+				<li>voire une version en écriture simplifiée (phonétique).</li>
+			</ul>
+			<p class="important"><strong>Important</strong>&nbsp;: ces alternatives demandent le recours à des prestataires spécialisés.</p>
+			<p>Ce critère est de niveau AAA&nbsp;: à ce titre, il n’a pas de caractère obligatoire, bien que sa mise en œuvre puisse améliorer considérablement l’expérience des utilisateurs handicapés mentaux.</p>
+			
+		</article>
+
+	</main>
+
+	<aside role="complementary" id="footer-block" class="clear">
+		<div class="col-1-2">
+			<h2 id="ailleurs">Voir ailleurs / Ressources</h2>
+			<ul>
+				<li><a href="https://disic.github.io/guide-impacts_utilisateurs/consultation.html">Impacts utilisateurs des défauts d’accessibilité en matière de consultation</a></li>
+			</ul>
+		</div>
+		<div class="col-1-2">
+			<h2 id="criteres">Critères RGAA&nbsp;3</h2>
+			<ul>
+				<li>13.6 [A]</li>
+				<li>13.9 [AAA]</li>
+				<li>13.14 [AAA]</li>
+			</ul>
+		</div>
+	</aside>
+
+	<footer id="footer" role="contentinfo" class="clear">
+		<h2>Licence d’utilisation</h2>
+		<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l’action publique"></a></p>
+		<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l’action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+	</footer>
+
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

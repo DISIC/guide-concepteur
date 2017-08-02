@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Fiche 4 : Tableaux - Guide du concepteur RGAA 3</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="css/styles.css" media="all">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <script type="text/javascript" src="highlight/highlight.pack.js"></script>
+  <link rel="stylesheet" href="highlight/styles/tomorrow-night-eighties.css" media="all">
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<div class="main-header">
+	<div class="inside">
+		<ul class="skip-links">
+			<li><a href="#main">contenu</a></li>
+			<li><a href="#navigation">navigation</a></li>
+		</ul>
+		<header role="banner" class="header  clear" id="banner">
+			<h1 class="title">Guide du concepteur RGAA&nbsp;3</h1>
+		</header>
+
+		<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+			<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+			<ul class="sommaire is-hidden" id="sommaireToggle">
+				<li><a href="index.html">Introduction</a></li>
+				<li>
+					<a href="conception-fonctionnelle.html">Conception fonctionnelle</a>
+					<ul>
+						<li><a href="1-images.html">Fiche 1&nbsp;: Images</a></li>
+						<li><a href="2-tableaux.html">Fiche 2&nbsp;: Tableaux</a></li>
+						<li><a href="3-formulaires.html">Fiche 3&nbsp;: Formulaires</a></li>
+						<li><a href="4-navigation.html">Fiche 4&nbsp;: Navigation</a></li>
+						<li><a href="5-consultation.html">Fiche 5&nbsp;: Consultation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-graphique.html">Conception graphique</a>
+					<ul>
+						<li><a href="6-couleurs.html">Fiche 6&nbsp;: Couleurs</a></li>
+						<li><a href="7-presentation.html">Fiche 7&nbsp;: Présentation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-multimedia.html">Conception multimédia</a>
+					<ul>
+						<li><a href="8-multimedia.html">Fiche 8&nbsp;: Multimédia</a></li>
+					</ul>
+				</li>
+				<li><a href="glossaire.html">Glossaire</a></li>
+			</ul>
+		</nav>
+		<div class="github-link">
+			<p><a href="https://github.com/DISIC/guide-concepteur">Contribuer</a>
+			<a class="pdfdown" title="Télécharger le Guide du concepteur RGAA 3 (pdf, 1,6 Mo)" href="export/guide-concepteurs.pdf">Télécharger</a></p>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+
+	<nav role="navigation" class="internav clear">
+		<ul>
+			<li><a class="prev" href="1-images.html"><span aria-hidden="true"> &laquo; </span>Fiche 1&nbsp;: Images </a></li>
+			<li><a class="next" href="3-formulaires.html">Fiche 3&nbsp;: Formulaires <span aria-hidden="true"> &raquo; </span></a></li>
+		</ul>
+	</nav>
+
+	<main id="main" role="main">
+		<h1 class="fiche-title">Fiche 2&nbsp;: Tableaux</h1>
+
+		<div class="bloc-haut">
+			<ul class="nav-context">
+				<li><a href="#introduction">Introduction - cas utilisateurs</a></li>
+				<li><a href="#tableauxsimples">Tableaux de données simples</a></li>
+				<li><a href="#tableauxcomplexes">Tableaux de données complexes</a></li>
+				<li><a href="#ailleurs">Voir ailleurs / Ressources</a></li>
+				<li><a href="#criteres">Critères RGAA 3</a></li>
+			</ul>
+	
+			<aside role="complementary" class="clear resume">
+				<h2 id="resume">Synthèse</h2>
+				<ul>
+					<li>Attribuer un titre pertinent à chaque tableau de données.</li>
+					<li>Prévoir un résumé pour chaque tableau de données complexe.</li>
+				</ul>
+			</aside>
+		
+		</div>
+
+		<article class="article" id="introduction">
+			<h2>Introduction - cas utilisateurss</h2>
+			<p>Un tableau est toujours complexe à utiliser avec un <a href="glossaire.html#lecteur-decran">lecteur d’écran</a>. Une personne aveugle n’a pas une vision globale du tableau. Elle le parcourt de manière séquentielle&nbsp;: une case après l’autre et ligne à ligne. Afin d’améliorer son expérience, les lecteurs d’écran offrent des fonctionnalités de parcours étendues en utilisant les flèches de direction.</p>
+		</article>
+
+		<article class="article" id="tableauxsimples">
+			<h2>Tableaux de données simples</h2>
+			<p>Un tableau est considéré comme simple s’il ne possède pas de cellules fusionnées qui rendent la compréhension délicate et s’il ne présente pas une structure (notamment des sous-contextes) qui rend sa compréhension dépendante d’une mise en forme.</p>
+			<p>Lors de la phase de conception, il est nécessaire de prévoir un titre pertinent pour chaque tableau. Ce titre doit permettre de comprendre les données du tableau. Par exemple&nbsp;: «&nbsp;Chiffres d’affaires des différents secteurs d’activités.&nbsp;» ou «&nbsp;Accessibilité des lignes du réseau de surface RATP&nbsp;» dans l’exemple ci-dessous.</p>
+			<table>
+					<caption>Accessibilité des lignes du réseau de surface RATP</caption>
+					<tbody><tr>
+							<th scope="col">Équipements</th>
+							<th scope="col">Nombre de lignes</th>
+							<th scope="col">Pourcentage du total de lignes</th>
+					</tr>
+					<tr>
+							<td>Rampe d’accès</td>
+							<td>260</td>
+							<td>70,46&nbsp;%</td>
+					</tr>
+					<tr>
+							<td>Annonce sonore</td>
+							<td>318</td>
+							<td>86,17&nbsp;%</td>
+					</tr>
+			</tbody></table>
+			<p><em>Ces données sont issues du site <a href="https://www.data.gouv.fr/fr/datasets/accessibilite-des-lignes-du-reseau-de-surface-ratp-ratp/">data.gouv.fr</a>. Leur exploitation dans ce contexte n’est faite qu’à titre d’illustration, elle ne relève en rien d’une statistique officielle.</em></p>
+			<p>Il est possible de masquer ce titre de manière accessible&nbsp;: il sera alors masqué visuellement, mais toujours accessible aux utilisateurs de <a href="glossaire.html#lecteur-decran">lecteurs d’écran</a>.</p>
+		</article>
+
+		<article class="article" id="tableauxcomplexes">
+			<h2>Tableaux de données complexes</h2>
+			<p>Les tableaux de données complexes sont généralement des tableaux qui possèdent des cellules fusionnées ou des sous-contextes.</p>
+			<p>Voici un exemple de tableau de données complexe&nbsp;:</p>
+			<table>
+					<caption>Nombre de gares et points d’arrêts TER, en fonction du type de handicap et du type de dispositif par handicap</caption>
+					<tbody><tr>
+						  <th colspan="2">Malvoyants</th>
+						  <th colspan="2">Aveugles</th>
+					</tr>
+					<tr>
+						  <th>Obstacles contrastés</th>
+						  <th>Portes contrastées</th>
+						  <th>Obstacles détectables à la canne</th>
+						  <th>Guidage en braille</th>
+					</tr>
+					<tr>
+						  <td style="text-align:center;">73</td>
+						  <td style="text-align:center;">65</td>
+						  <td style="text-align:center;">103</td>
+						  <td style="text-align:center;">0</td>
+					</tr>
+					<tr>
+						  <td style="text-align:center;font-weight:bold" colspan="2">138</td>
+						  <td style="text-align:center;font-weight:bold" colspan="2">103</td>
+					</tr>
+			</tbody></table>
+			<p><em>Ces données sont issues du site <a href="http://data.gouv.fr">data.gouv.fr</a> (<a href="https://www.data.gouv.fr/fr/datasets/accessibilite-des-gares-et-points-d-arret-ter-aux-personnes-a-mobilite-reduite-en-2013-npc/">Accessibilité des gares et points d’arrêt TER aux personnes à mobilité réduite en 2013</a>). Leur exploitation dans ce contexte n’est faite qu’à titre d’illustration, elle ne relève en rien d’une statistique officielle.</em></p>
+			
+			<p>Comme les tableaux de données simples, les tableaux de données complexes doivent posséder un titre.</p>
+			
+			<p>De plus, chaque tableau de données complexe doit posséder un résumé&nbsp;: le contenu de ce résumé doit être prévu lors de la phase de conception. Ce résumé a pour objectif d’expliciter la structure du tableau, en décrivant de façon factuelle son organisation spaciale. Ce résumé ne sera pas affiché visuellement sous le tableau&nbsp;: il sera contenu dans une balise HTML dédiée (<code>caption</code>).</p>
+
+			<p>Ci-dessous un exemple de tableau complexe (issu et adapté du site de l'INSEE). Vous y trouvez des en-têtes de colonnes fusionnées («&nbsp;Variation (en %) au cours&nbsp;») ainsi que des en-têtes qui titrent des parties du tableau (toutes les lignes fusionnées du type «&nbsp;a) Ensemble des ménages - France&nbsp;»).</p>
+
+			<div class="clear note">
+				<div class="col-1-2 space-top">
+					<img src="img/tableau-complexe.jpeg" alt="" />
+				</div>
+				<div class="col-1-2 space-top">
+					<p>Dans ce cas de tableau complexe, pour faciliter la lecture, il serait par exemple possible de découper ce tableau en 3 tableaux distincts, chacun correspondant aux 3 sections (a, b et c).</p>
+					<p>Si ce tableau reste en l'état, un résumé pertinent pourrait être&nbsp;:</p>
+					<p>«&nbsp;Répartition des ménages en France en fonction du type d'achats. On y trouve 3 grands regroupements&nbsp;:</p>
+					<ul>
+					<li>un premier regroupement concerne l'ensemble des ménages en France&nbsp;;</li>
+					<li>un second regroupement concerne les ménages urbains dont le chef est ouvrier ou employé&nbsp;;</li>
+					<li>un troisième regroupement concerne les ménages du 1<sup>er</sup> quintile de la distribution des niveaux de vie.</li>
+					</ul>
+					<p>Pour chacun des regroupements&nbsp;:</p>
+					<ul>
+					<li>la première colonne représente les pondérations pour l'année 2015&nbsp;;</li>
+					<li>la seconde colonne représente l'indice pour le mois d'août 2015&nbsp;;</li>
+					<li>la troisième colonne représente la variation en pourcent au cours du dernier mois&nbsp;;</li>
+					<li>la dernière colonne représente la variation en pourcent au cours des 12 derniers mois.</li>
+					</ul>
+				</div>
+			</div>
+
+			<p>Note&nbsp;: bien qu’il soit préférable que le titre et le résumé des tableaux complexes soient affichés, vous pouvez demander à votre équipe d’intégrateurs de les positionner hors écran sans utiliser de propriétés CSS qui les rendraient invisibles pour un lecteur d’écran (cf. <a href="https://disic.github.io/guide-integrateur/2-navigation.html#liesnrapide">Liens d’accès rapides dans le Guide de l’intégrateur RGAA&nbsp;3</a>).</p>
+
+			<p>Pour faciliter la compréhension d’un tableau complexe, on peut également le scinder en plusieurs tableaux simples. Toutefois, cette scission n’est pas toujours possible, car il peut y avoir énormément de redondance d’un tableau à l’autre. Aussi, une alternative consiste à scinder un tableau complexe en listes. Dans ce cas-là, on peut donc prévoir un lien «&nbsp;Version accessible du tableau&nbsp;» avec une liste en-tête / données, en-tête / données, en-tête / données, etc. Et on aura exactement la même restitution vocale pour une personne aveugle. De plus, pour une personne handicapée mentale, la répétition des en-têtes sera la seule façon de comprendre.</p>
+
+		</article>
+
+	</main>
+
+	<aside role="complementary" id="footer-block" class="clear">
+		<div class="col-1-2">
+			<h2 id="ailleurs">Voir ailleurs / Ressources</h2>
+			<ul>
+				<li><a href="https://disic.github.io/guide-impacts_utilisateurs/tableaux.html">Impacts utilisateurs des défauts d’accessibilité des tableaux</a></li>
+				<li><a href="http://disic.github.io/guide-contribuer_accessible/tableaux.html">Fiche «&nbsp;Des tableaux pour présenter des données&nbsp;» dans le guide Contribuer sur le web de manière accessible</a></li>
+			</ul>
+		</div>
+		<div class="col-1-2">
+			<h2 id="criteres">Critères RGAA&nbsp;3</h2>
+			<ul>
+				<li>5.1 [A]</li>
+				<li>5.2 [A]</li>
+				<li>5.4 [A]</li>
+				<li>5.5 [A]</li>
+				<li>5.6 [A]</li>
+				<li>5.7 [A]</li>
+			</ul>
+		</div>
+	</aside>
+
+	<footer id="footer" role="contentinfo" class="clear">
+		<h2>Licence d’utilisation</h2>
+		<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l’action publique"></a></p>
+		<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l’action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+	</footer>
+
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

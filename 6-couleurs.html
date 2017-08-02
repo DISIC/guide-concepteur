@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Fiche 6 : Couleurs - Guide du concepteur RGAA 3</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="css/styles.css" media="all">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <script type="text/javascript" src="highlight/highlight.pack.js"></script>
+  <link rel="stylesheet" href="highlight/styles/tomorrow-night-eighties.css" media="all">
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<div class="main-header">
+	<div class="inside">
+		<ul class="skip-links">
+			<li><a href="#main">contenu</a></li>
+			<li><a href="#navigation">navigation</a></li>
+		</ul>
+		<header role="banner" class="header  clear" id="banner">
+			<h1 class="title">Guide du concepteur RGAA&nbsp;3</h1>
+		</header>
+
+		<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+			<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+			<ul class="sommaire is-hidden" id="sommaireToggle">
+				<li><a href="index.html">Introduction</a></li>
+				<li>
+					<a href="conception-fonctionnelle.html">Conception fonctionnelle</a>
+					<ul>
+						<li><a href="1-images.html">Fiche 1&nbsp;: Images</a></li>
+						<li><a href="2-tableaux.html">Fiche 2&nbsp;: Tableaux</a></li>
+						<li><a href="3-formulaires.html">Fiche 3&nbsp;: Formulaires</a></li>
+						<li><a href="4-navigation.html">Fiche 4&nbsp;: Navigation</a></li>
+						<li><a href="5-consultation.html">Fiche 5&nbsp;: Consultation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-graphique.html">Conception graphique</a>
+					<ul>
+						<li><a href="6-couleurs.html">Fiche 6&nbsp;: Couleurs</a></li>
+						<li><a href="7-presentation.html">Fiche 7&nbsp;: Présentation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-multimedia.html">Conception multimédia</a>
+					<ul>
+						<li><a href="8-multimedia.html">Fiche 8&nbsp;: Multimédia</a></li>
+					</ul>
+				</li>
+				<li><a href="glossaire.html">Glossaire</a></li>
+			</ul>
+		</nav>
+		<div class="github-link">
+			<p><a href="https://github.com/DISIC/guide-concepteur">Contribuer</a>
+			<a class="pdfdown" title="Télécharger le Guide du concepteur RGAA 3 (pdf, 1,6 Mo)" href="export/guide-concepteurs.pdf">Télécharger</a></p>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+
+	<nav role="navigation" class="internav clear">
+		<ul>
+			<li><a class="prev" href="conception-graphique.html"><span aria-hidden="true"> &laquo; </span>Conception graphique </a></li>
+			<li><a class="next" href="7-presentation.html">Fiche 7&nbsp;: Présentation <span aria-hidden="true"> &raquo; </span></a></li>
+		</ul>
+	</nav>
+
+	<main id="main" role="main">
+		<h1 class="fiche-title">Fiche 6&nbsp;: Couleurs</h1>
+
+		<div class="bloc-haut">
+			<ul class="nav-context">			
+				<li><a href="#introduction">Introduction - cas utilisateurs</a></li>
+				<li><a href="#linformation-par-la-couleur">L’information donnée par la couleur</a></li>
+				<li><a href="#contrastes">Contrastes</a></li>
+				<li><a href="#ailleurs">Voir ailleurs / Ressources</a></li>
+				<li><a href="#criteres">Critères RGAA 3</a></li>
+			</ul>
+	
+			<aside role="complementary" class="clear resume">
+				<h2 id="resume">Synthèse</h2>
+				<ul>
+					<li>Prévoir une alternative textuelle à l’utilisation signifiante de la couleur sur un texte.</li>
+					<li>S’assurer que le contraste entre la couleur du texte et la couleur de l’arrière-plan est suffisant.</li>
+					<li>Fournir des méthodes de personnalisation de l’interface par l’utilisateur si les contrastes prévus par la charte graphique sont insuffisants.</li>
+				</ul>
+			</aside>
+		</div>
+
+		<article class="article" id="introduction">
+			<h2>Introduction - cas utilisateurs</h2>
+			<p>Les couleurs sont une problématique importante pour les utilisateurs qui ne perçoivent pas du tout les couleurs, notamment les personnes aveugles, les grands malvoyants et les personnes ayant des déficiences de perception des couleurs (daltonisme par exemple) ou des contrastes.</p>
+			<p>Si une personne aveugle ne peut pas du tout voir les couleurs, beaucoup d’utilisateurs n’ont qu’une vision partielle ou dégradée des couleurs. Cela peut concerner une seule couleur, plusieurs couleurs ou des combinaisons de couleurs particulières.</p>
+			<p>Le déficit de perception des couleurs est très répandu et ses conséquences peuvent être désastreuses pour la perception et la compréhension des contenus et des fonctionnalités.</p>
+			<p>Or, la couleur est parfois le seul vecteur utilisé pour donner de l’information. Par exemple, dans une liste, vous avez mis en rouge les éléments obligatoires et laissé en noir les éléments optionnels. Aussi, un utilisateur qui ne peut pas voir ces couleurs n’aura pas accès à cette information. Aussi, vous devez toujours fournir un autre moyen que la couleur, de préférence textuel, pour que tous les utilisateurs, quelle que soit leur capacité de perception, puissent avoir accès à cette information.</p>
+			<p>Une autre problématique liée à la couleur concerne les contrastes. Pour un utilisateur qui a des difficultés à percevoir les contrastes, certains textes peuvent être impossibles à lire si la couleur d’écriture n’est pas suffisamment contrastée par rapport à la couleur du fond.</p>
+		</article>
+
+		<article class="article" id="linformation-par-la-couleur">
+			<h2>L’information donnée par la couleur</h2>
+			<p>Lorsqu’une information est donnée par la couleur, elle doit obligatoirement être donnée aussi par une autre méthode, par exemple par un texte qui donne la même information.</p>
+			<p>En effet, dans certains cas, l’absence d’accès à l’information donnée par la couleur a pour conséquence une perte d’information. Mais ce problème d’accessibilité rend bien souvent les contenus ou les fonctionnalités complètement inutilisables pour les utilisateurs aveugles, très malvoyants ou ceux qui perçoivent mal les couleurs.</p>
+			<p>Par exemple, on utilise souvent la couleur rouge pour signaler une erreur de saisie dans un formulaire. Or, un utilisateur aveugle, très malvoyant ou percevant mal les couleurs (daltonisme par exemple) ne percevra pas cette couleur, et passera donc à côté d’une information pourtant capitale. Cela l’empêchera même de comprendre pourquoi il ne peut pas valider le formulaire et passer à l’étape suivante.</p>
+			<p>D’autres cas typiques d’utilisation de la couleur pour véhiculer de l’information&nbsp;:</p>
+			<ul>
+				<li>une fonctionnalité de sélection multiple dans une liste d’objets&nbsp;: si l’objet sélectionné est indiqué uniquement par la couleur, les utilisateurs aveugles, très malvoyants ou ne percevant pas ou mal la couleur se retrouveront dans l’incapacité d’utiliser la fonctionnalité. Dans ce cas, il faudra indiquer textuellement que l’objet est sélectionné&nbsp;;</li>
+				<li>l’indication de la page active dans un menu&nbsp;: si le statut actif de la page est indiqué uniquement par la couleur, alors les utilisateurs aveugles ou qui ne perçoivent pas ou mal les couleurs ou les contrastes ne sauront pas qu’il s’agit de la page active. Dans ce cas, on pourra tout simplement ajouter dans le titre du lien une mention sur le modèle&nbsp;: «&nbsp;Accueil - page active&nbsp;», par exemple.</li>
+			</ul>
+			<p>Lors du travail de conception graphique, il faut donc s’assurer que chaque mot ou ensemble de mots dont la mise en couleur est porteuse d’information, possède une alternative (par exemple textuelle) qui transmet la même information. Dans le cas de l’utilisation de motifs (par exemple hachures, pointillés…), le problème reste le même pour les utilisateurs aveugles, qui ne percevront pas la différence d’une couleur à l’autre ou d’un motif à l’autre. Il faut donc, là aussi, prévoir une alternative accessible.</p>
+			<p>Cela est également valable pour les images ou les médias porteurs d’information&nbsp;: cette information ne doit pas être donnée uniquement par la couleur. Par exemple, dans le cas des diagrammes, des cartes et des graphiques, il vaut mieux prévoir une légende textuelle en plus d’une légende à base de couleurs. Ainsi, il sera plus facile pour les utilisateurs ayant des problèmes de vue de comprendre l’information véhiculée par ces éléments graphiques.</p>
+			<p>Il n’existe pas de technologie d’assistance efficace pour traiter ces problèmes d’accessibilité&nbsp;: le rôle des concepteurs graphiques à ce sujet est donc crucial.</p>
+			<p class="important"><strong>Important</strong>&nbsp;: À noter que l'utilisation d'une information donnée par la forme comme alternative à une information donnée par la couleur sera insuffisante, les utilisateurs aveugles ne voyant ni forme ni couleur.</p>
+			<h3>Exemple d’information donnée par la couleur dans un graphique</h3>
+			<p>Ci-dessous un exemple de graphique où l’information par la couleur est indispensable pour le comprendre. La couleur symbolise un élément et cette couleur est définie dans une légende. La meilleure alternative à cette présentation est alors de rédiger une description détaillée du graphique. Note&nbsp;: il est possible de traiter visuellement cette description détaillée de différentes façons&nbsp;: <abbr title="confer" lang="la">cf.</abbr> <a href="1-images.html#descriptiondetaillee">Description détaillée des images porteuses d’information complexe</a>.</p>
+			<div class="clear note">
+				<div class="col-1-2">
+					<p><img src="img/camembert.JPG" alt="Répartition de la population par taille de communes (description détaillée ci-dessous)" /></p>
+				</div>
+				<div class="col-1-2">
+					<p>Répartition de la population par taille de communes (description détaillée du graphique)&nbsp;:</p>
+					<ul>
+					<li>Les communes de moins de 1 000 habitants représentent 22,3% de la population.</li>
+					<li>Les communes qui comptent entre 1 000 et 5 000 habitants représentent 23,5% de la population.</li>
+					<li>Les communes qui comptent entre 5 000 et 10 000 habitants représentent 12,3% de la population.</li>
+					<li>Les communes qui comptent entre 10 000 et 20 000 habitants représentent 11,6% de la population.</li>
+					<li>Les communes qui comptent entre 20 000 et 50 000 habitants représentent 17,0% de la population.</li>
+					<li>Les communes de plus de 50 000 habitants représentent 13,2% de la population.</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Exemple d’information donnée par la couleur dans une illustration</h3>
+			<p>Sur les images, la couleur peut apporter une information. Par exemple, sur l’image ci-dessous, la couleur met en évidence la zone du cerveau concernée dans un article associé. L’information véhiculée ici est la position de la zone en question. Cette information doit se retrouver dans le texte adjacent à l’image. Par exemple, on pourra retrouver dans le texte&nbsp;: « Le noyau est situé à l’arrière du cerveau ».</p>
+			<div class="clear">
+				<div class="col-1-2">
+					<img src="img/info-couleurs.png" alt="" />
+				</div>
+				<div class="col-1-2">
+					<p>Il est important que cette information ne soit pas uniquement présente dans le <a href="glossaire.html#texte-de-remplacement">texte de remplacement de l’image</a>. En effet, le texte de remplacement n’est bien souvent accessible qu’aux personnes qui utilisent un <a href="glossaire.html#lecteur-decran">lecteur d’écran</a>. Les personnes qui ont des difficultés de perception des couleurs n’utilisent pas ces logiciels et n’auront pas accès au texte de remplacement. C’est pourquoi il est important que la description de l’information donnée par la couleur soit réalisée de manière textuelle et visible.</p>
+				</div>
+			</div>
+
+		</article>
+
+		<article class="article" id="contrastes">
+			<h2>Contrastes</h2>
+			<p>Les contrastes de couleurs concernent le rapport de contraste entre la couleur d’écriture d’un texte et sa couleur d’arrière-plan.</p>
+			<p>Ces contrastes concernent&nbsp;:</p>
+			<ul>
+				<li>les textes HTML&nbsp;;</li>
+				<li>les textes présents dans les images&nbsp;;</li>
+				<li>les textes incrustés dans les vidéos.</li>
+			</ul>
+			<p>Il existe des valeurs qui assurent un contraste minimum suffisant pour une large part des utilisateurs ayant des difficultés à percevoir les couleurs. Les rapports de contraste attendus varient en fonction de la taille de texte, de sa graisse et du niveau d’accessibilité visé.</p>
+			<p>Pour le niveau AA, les rapports de contraste minimaux sont les suivants&nbsp;:</p>
+			<ul>
+				<li><strong>Rapports de contraste attendus pour du texte sans effet de graisse, niveau AA</strong>&nbsp;: 
+					<ul>
+						<li>si la taille du texte sans effet de graisse est <a href="glossaire.html#taille-caracteres-contraste">inférieure à 150% de la taille de police par défaut (ou <code>1.5em</code>)</a>, le rapport de contraste entre la couleur du texte (y compris le texte en image) et son arrière-plan doit être de 4.5:1, au moins&nbsp;;</li>
+						<li>si la taille du texte sans effet de graisse est <a href="glossaire.html#taille-caracteres-contraste">supérieure ou égale à 150% de la taille de police par défaut (ou <code>1.5em</code>)</a>, le rapport de contraste entre la couleur du texte (y compris le texte en image) et son arrière-plan doit être de 3:1, au moins.</li>
+					</ul>
+				</li>
+				<li><strong>Rapports de contraste attendus pour du texte en gras, niveau AA</strong>&nbsp;: 
+					<ul>
+						<li>si la taille du texte en gras est <a href="glossaire.html#taille-caracteres-contraste">inférieure à 120% de la taille de police par défaut (ou <code>1.2em</code>)</a>, le rapport de contraste entre la couleur du texte (y compris le texte en image) et son arrière-plan doit être de 4.5:1, au moins&nbsp;;</li>
+						<li>si la taille du texte en gras est <a href="glossaire.html#taille-caracteres-contraste">supérieure ou égale à 120% de la taille de police par défaut (ou <code>1.2em</code>)</a>, le rapport de contraste entre la couleur du texte (y compris le texte en image) et son arrière-plan doit être de 3:1, au moins.</li>
+					</ul>
+				</li>
+			</ul>
+			<p>Il est possible d’améliorer encore ces contrastes grâce aux rapports de niveau AAA&nbsp;:</p>
+			<ul>
+				<li><strong>Rapports de contraste attendus pour du texte sans effet de graisse, niveau AAA</strong>&nbsp;: 
+					<ul>
+						<li>si la taille du texte sans effet de graisse est <a href="glossaire.html#taille-caracteres-contraste">inférieure à 150% de la taille de police par défaut (ou <code>1.5em</code>)</a>, le rapport de contraste entre la couleur du texte (y compris le texte en image) et son arrière-plan doit être de 7:1, au moins&nbsp;;</li>
+						<li>si la taille du texte sans effet de graisse est <a href="glossaire.html#taille-caracteres-contraste">supérieure ou égale à 150% de la taille de police par défaut (ou <code>1.5em</code>)</a>, le rapport de contraste entre la couleur du texte (y compris le texte en image) et son arrière-plan doit être de 4:5:1, au moins.</li>
+					</ul>
+				</li>
+				<li><strong>Rapports de contraste attendus pour du texte en gras, niveau AAA</strong>&nbsp;: 
+					<ul>
+						<li>si la taille du texte en gras est <a href="glossaire.html#taille-caracteres-contraste">inférieure à 120% de la taille de police par défaut (ou <code>1.2em</code>)</a>, le rapport de contraste entre la couleur du texte (y compris le texte en image) et son arrière-plan doit être de 7:1, au moins&nbsp;;</li>
+						<li>si la taille du texte en gras est <a href="glossaire.html#taille-caracteres-contraste">supérieure ou égale à 120% de la taille de police par défaut (ou <code>1.2em</code>)</a>, le rapport de contraste entre la couleur du texte (y compris le texte en image) et son arrière-plan doit être de 4:5:1, au moins.</li>
+					</ul>
+				</li>
+			</ul>
+			<h3 id="outils-calcul-contraste">Outils d’évaluation de contraste</h3>
+			<p>Les outils suivants vous permettront de tester vos combinaisons de couleurs et d’évaluer leur contraste&nbsp;:</p>
+			<ul>
+				<li><a href="https://www.paciellogroup.com/resources/contrastanalyser/"><span lang="en">Colour Contrast Analyser</span> (site et application en anglais)</a>&nbsp;: application pour <span lang="en">Windows</span> et MacOS qui permet de calculer le rapport de contraste entre deux codes hexadécimaux, et d’évaluer leur conformité WCAG&nbsp;;</li>
+				<li><a href="http://contrast-finder.tanaguru.com/"><span lang="en">Tanaguru Contrast Finder</span></a>&nbsp;: un outil en ligne en français qui permet d’évaluer le contraste entre deux couleurs et de trouver des contrastes alternatifs en cas de non-conformité&nbsp;;</li>
+				<li><a href="http://leaverou.github.io/contrast-ratio/"><span lang="en">Contrast Ratio</span> (en anglais)</a>&nbsp; cet outil en ligne vous permet de saisir un code couleur pour l’arrière-plan et un code couleur pour le texte, puis il calcule le rapport de contraste pour vous et vous indique le niveau WCAG atteint&nbsp;;</li>
+				<li><a href="https://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333"><span lang="en">Colour Contrast Check</span> (en anglais)</a>&nbsp;: un outil en ligne qui permet une vérification de contraste encore plus fine&nbsp;;</li>
+				<li><a href="http://colorsafe.co/"><span lang="en">Color Safe</span> (en anglais)</a>&nbsp;: une application en ligne qui permet d’expérimenter des combinaisons de couleurs immédiatement conformes.</li>
+			</ul>
+			<p class="important"><strong>Important</strong>&nbsp;: les couleurs d’une charte graphique ne sont pas concernées par cette obligation de contraste. Ainsi, si les couleurs d’une charte graphique sont insuffisamment contrastées, la solution consiste à mettre à disposition des utilisateurs un mécanisme de personnalisation de l’interface. Voir à ce sujet <a href="7-presentation.html#personnalisation-couleurs-contrastes">Personnalisation des couleurs et contrastes</a>.</p>
+		</article>
+
+	</main>
+
+	<aside role="complementary" id="footer-block" class="clear">
+		<div class="col-1-2">
+			<h2 id="ailleurs">Voir ailleurs / Ressources</h2>
+			<ul>
+				<li><a href="https://disic.github.io/guide-impacts_utilisateurs/couleurs.html">Impacts utilisateurs des défauts d’accessibilité en matière de couleurs</a></li>
+				<li><a href="https://alistapart.com/article/color-accessibility-workflows"><span lang="en">Color Accessibility Workflows</span> (en anglais)</a></li>
+			</ul>
+		</div>
+		<div class="col-1-2">
+			<h2 id="criteres">Critères RGAA&nbsp;3</h2>
+			<ul>
+				<li>3.1 [A]</li>
+				<li>3.2 [A]</li>
+				<li>3.3 [AA]</li>
+				<li>3.4 [AAA]</li>
+			</ul>
+		</div>
+	</aside>
+
+	<footer id="footer" role="contentinfo" class="clear">
+		<h2>Licence d’utilisation</h2>
+		<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l’action publique"></a></p>
+		<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l’action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+	</footer>
+
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

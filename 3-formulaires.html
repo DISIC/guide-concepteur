@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Fiche 3 : Formulaires - Guide du concepteur RGAA 3</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="css/styles.css" media="all">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <script type="text/javascript" src="highlight/highlight.pack.js"></script>
+  <link rel="stylesheet" href="highlight/styles/tomorrow-night-eighties.css" media="all">
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<div class="main-header">
+	<div class="inside">
+		<ul class="skip-links">
+			<li><a href="#main">contenu</a></li>
+			<li><a href="#navigation">navigation</a></li>
+		</ul>
+		<header role="banner" class="header  clear" id="banner">
+			<h1 class="title">Guide du concepteur RGAA&nbsp;3</h1>
+		</header>
+
+		<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+			<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+			<ul class="sommaire is-hidden" id="sommaireToggle">
+				<li><a href="index.html">Introduction</a></li>
+				<li>
+					<a href="conception-fonctionnelle.html">Conception fonctionnelle</a>
+					<ul>
+						<li><a href="1-images.html">Fiche 1&nbsp;: Images</a></li>
+						<li><a href="2-tableaux.html">Fiche 2&nbsp;: Tableaux</a></li>
+						<li><a href="3-formulaires.html">Fiche 3&nbsp;: Formulaires</a></li>
+						<li><a href="4-navigation.html">Fiche 4&nbsp;: Navigation</a></li>
+						<li><a href="5-consultation.html">Fiche 5&nbsp;: Consultation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-graphique.html">Conception graphique</a>
+					<ul>
+						<li><a href="6-couleurs.html">Fiche 6&nbsp;: Couleurs</a></li>
+						<li><a href="7-presentation.html">Fiche 7&nbsp;: Présentation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-multimedia.html">Conception multimédia</a>
+					<ul>
+						<li><a href="8-multimedia.html">Fiche 8&nbsp;: Multimédia</a></li>
+					</ul>
+				</li>
+				<li><a href="glossaire.html">Glossaire</a></li>
+			</ul>
+		</nav>
+		<div class="github-link">
+			<p><a href="https://github.com/DISIC/guide-concepteur">Contribuer</a>
+			<a class="pdfdown" title="Télécharger le Guide du concepteur RGAA 3 (pdf, 1,6 Mo)" href="export/guide-concepteurs.pdf">Télécharger</a></p>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+
+	<nav role="navigation" class="internav clear">
+		<ul>
+			<li><a class="prev" href="2-tableaux.html"><span aria-hidden="true"> &laquo; </span>Fiche 2&nbsp;: Tableaux </a></li>
+			<li><a class="next" href="4-navigation.html">Fiche 4&nbsp;: Navigation <span aria-hidden="true"> &raquo; </span></a></li>
+		</ul>
+	</nav>
+
+	<main id="main" role="main">
+		<h1 class="fiche-title">Fiche 3&nbsp;: Formulaires</h1>
+
+		<div class="bloc-haut">
+			<ul class="nav-context">
+				<li><a href="#introduction">Introduction - cas utilisateurs</a></li>
+				<li>
+					<a href="#etiquettes">Étiquettes</a>
+					<ul>
+						<li><a href="#etiquettepertinence">Pertinence des étiquettes de champs</a></li>
+						<li><a href="#placeholder"><code lang="en">placeholder</code>, attention.</a></li>
+						<li><a href="#boutonpertinence">Pertinence des intitulés de boutons</a></li>
+						<li><a href="#etiquettesaccolees">Étiquettes accolées</a></li>
+					</ul>
+				</li>
+				<li><a href="#listesdechoix">Listes de choix</a></li>
+				<li><a href="#regroupement">Regroupement de champs</a></li>
+				<li><a href="#modificationdonnees">Modification, mise à jour ou récupération des données</a></li>
+				<li>
+					<a href="#aidessaisie">Aides à la saisie</a>
+					<ul>
+						<li><a href="#champsobligatoires">Champs obligatoires</a></li>
+						<li><a href="#formatattendu">Format attendu</a></li>
+					</ul>
+				</li>
+				<li><a href="#erreursdesaisie">Erreurs de saisie</a></li>
+				<li><a href="#ailleurs">Voir ailleurs / Ressources</a></li>
+				<li><a href="#criteres">Critères RGAA</a></li>
+			</ul>
+	
+			<aside role="complementary" class="clear resume">
+				<h2 id="resume">Synthèse</h2>
+				<ul>
+					<li>Définir une étiquette pertinente pour chaque champ de formulaire, y compris les listes de choix.</li>
+					<li>Ne pas utiliser <code lang="en">placeholder</code> comme étiquette.</li>
+					<li>Définir des intitulés de boutons pertinents.</li>
+					<li>Accoler chaque étiquette au champ qu’elle définit.</li>
+					<li>Regrouper les options des listes de choix si besoin, et attribuez une étiquette pertinence à chaque regroupement.</li>
+					<li>Indiquer les champs obligatoires dans l’étiquette du champ si besoin, à l’aide d’une mention ou d’un symbole dont la légende se trouve avant le formulaire.</li>
+					<li>Indiquer le format de saisie dans l’étiquette des champs obligatoires.</li>
+					<li>Insérer l’erreur de saisie à côté du champ concerné et indiquer un exemple de saisie réelle lorsque nécessaire.</li>
+				</ul>
+			</aside>
+		</div>
+
+		<article class="article" id="introduction">
+			<h2>Introduction - cas utilisateurs</h2>
+			<p>L’identification des champs de formulaire est un élément essentiel. Beaucoup d’utilisateurs handicapés vont accéder aux champs de manières très diverses.</p>
+			<p>Les utilisateurs de <a href="glossaire.html#lecteur-decran">lecteurs d’écran</a> disposent de raccourcis clavier leur permettant de naviguer rapidement d’un champ à l’autre et certains dispositifs de navigation vocale proposent d’accéder aux champs par leur nom.</p>
+			<p>Dans ce type de contexte, il est important que chaque champ de formulaire possède une étiquette liée, afin qu’elle soit restituée lors de la prise de focus. Cela permettra aux personnes aveugles d’utiliser à profit les raccourcis clavier et aux utilisateurs de navigation vocale d’accéder rapidement aux champs. En effet, quand on clique sur l’étiquette d’un champ, cela active le champ. Une étiquette correctement reliée à un champ permet donc d’étendre la surface de clic et améliore ainsi l’efficacité des manipulations, en particulier pour les utilisateurs de dispositifs de pointage adapté.</p>
+		</article>
+
+		<article class="article" id="etiquettes">
+			<h2>Étiquettes</h2>
+			<p>Une étiquette de champ est un texte qui permet d’expliquer quelle donnée est attendue par le champ (nom, prénom, date de naissance, courriel, etc.).</p>
+			<p>Pour être conforme, une étiquette doit&nbsp;:</p>
+			<ul>
+				<li>être pertinente&nbsp;;</li>
+				<li>être correctement reliée au champ correspondant.</li>
+			</ul>
+
+			<h3 id="etiquettepertinence">Pertinence des étiquettes de champs</h3>
+			<p>Une étiquette est pertinente si elle permet de comprendre la fonction du champ auquel elle est reliée. Il faut rester concis&nbsp;: l’objectif est que l’utilisateur comprenne ce qu’on attend de sa saisie. Par exemple, pour les données d’identité, une étiquette «&nbsp;Nom&nbsp;», une étiquette «&nbsp;Prénom&nbsp;» et une étiquette «&nbsp;Téléphone&nbsp;» sont des étiquettes pertinentes qui permettent de comprendre ce que l’on doit y inscrire.</p>
+			<p>De plus, une étiquette associée à un champ de formulaire ayant la même fonction et répétée plusieurs fois dans une même page ou dans un ensemble de pages doit être cohérente.</p>
+			<p>Note&nbsp;: pour un champ de recherche, il est toléré de positionner l’étiquette hors écran, si elle reste accessible aux <a href="glossaire.html#lecteur-decran">lecteurs d’écran</a>, parce que le contexte permet d’en comprendre la fonction.</p>
+
+			<h4 id="placeholder"><code lang="en">placeholder</code>, attention.</h4>
+			<p>Un <code lang="en">placeholder</code> est un texte décoratif qui peut être ajouté au niveau d’un champ de formulaire. C’est un texte grisé qui disparaît lorsque l’utilisateur débute la saisie.</p>
+			<figure>
+				<img src="img/placeholder.jpg" alt="" />
+				<figcaption>Exemple de <code lang="en">placeholder</code>, vu sur le <a href="http://infos-parents-accessibles.education.gouv.fr/">site «&nbsp;Infos-Parents&nbsp;» du Ministère de l’Éducation nationale</a></figcaption>
+			</figure>
+			<p>Bien qu’il soit fréquemment utilisé par les <span lang="en">designers</span> web, <code lang="en">placeholder</code> n’est pas considéré comme une étiquette valide au regard du RGAA pour les raisons suivantes&nbsp;:</p>
+			<ul>
+				<li>son contraste est insuffisant (ce qui peut éventuellement être corrigé avec CSS)&nbsp;;</li>
+				<li>il n’est pas restitué de manière uniforme par les lecteurs d’écran, ce qui le rend inaccessible aux utilisateurs aveugles ou malvoyants.</li>
+			</ul>
+			<p>En outre, un utilisateur pourrait penser que le <code lang="en">placeholder</code> constitue la valeur du champ, ce qui l’induirait en erreur et pourrait perturber sa saisie.</p>
+			<p>Si vous souhaitez malgré tout utiliser <code lang="en">placeholder</code> à des fins esthétiques, assurez-vous que le champ possédant le <code lang="en">placeholder</code> possède également un <a href="glossaire.html#attribut-title">attribut <code lang="en">title</code></a> valide et pertinent. Pour cela, l’attribut <code lang="en">title</code> reprendra exactement le même intitulé que le <code lang="en">placeholder</code>. En effet, une information que vous ajouteriez dans le <code lang="en">placeholder</code> pour aider certains utilisateurs doit nécessairement être présente dans l’étiquette du champ, afin d’être accessible à tous.</p>
+
+			<h3 id="boutonpertinence">Pertinence des intitulés de boutons</h3>
+			<p>Les boutons qui permettent d’interagir avec le formulaire doivent avoir des intitulés pertinents qui permettent à l’utilisateur de comprendre l’action du bouton. Ils sont essentiels pour les utilisateurs aveugles afin qu’ils soient sûrs de l’action qu’ils réalisent.</p>
+			<p>Par exemple des intitulés comme «&nbsp;Envoyer&nbsp;», «&nbsp;Ok&nbsp;», «&nbsp;Valider&nbsp;»… ne seront pas suffisamment pertinents.</p>
+			<p>À l’inverse, des intitulés qui explicitent l’action sont pertinents&nbsp;: par exemple&nbsp;: «&nbsp;M’inscrire au cours de danse&nbsp;», «&nbsp;Réserver mes billets en ligne&nbsp;».</p>
+			<p>Cependant, il est également possible de conserver un intitulé de bouton court, et de le rendre pertinent à l’aide d’un <a href="glossaire.html#attribut-title">attribut <code lang="en">title</code></a> par exemple. Cette implémentation est conforme, mais nous vous invitons à n’utiliser cette implémentation que dans des cas restreints. En effet, l’attribut <code lang="en">title</code> n’est visible qu’au survol de la souris. Or, un utilisateur voyant qui navigue exclusivement au clavier n’accédera pas à cette information. Il existe des scripts qui permettent de faire apparaître le contenu de l’attribut <code lang="en">title</code> lors de la tabulation (par exemple <a href="http://access42.net/AccessTooltip-rendre-le-title-accessible-au-clavier.html">AccessTooltip</a>).</p>
+			<p>Faute d’intitulé pertinent sur un bouton de type image, les <a href="glossaire.html#lecteur-decran">lecteurs d’écran</a> vocaliseraient le nom du fichier image, ce qui serait incompréhensible pour les utilisateurs aveugles. Il faut donc prévoir l’intitulé du bouton lors de la phase de conception, et le communiquer aux équipes techniques, même s’il s’agit d’un bouton qui ne contient a priori qu’une image. Demandez à votre équipe d’intégrateurs de prévoir cet intitulé dans le code HTML et de le positionner hors écran sans utiliser de propriétés CSS qui le rendraient invisible pour un lecteur d’écran (cf. <a href="https://disic.github.io/guide-integrateur/2-navigation.html#liesnrapide">Liens d’accès rapides dans le Guide de l’intégrateur RGAA&nbsp;3</a>).</p></p>
+
+			<h3 id="etiquettesaccolees">Étiquettes accolées</h3>
+			<p>Pour aider l’utilisateur à comprendre le lien entre une étiquette et un champ, il faut accoler l’étiquette au champ de façon prévisible.</p>
+			<p>Une technique courante consiste à positionner l’étiquette immédiatement avant le champ auquel elle se rattache, soit à côté à gauche ou au-dessus à gauche du champ pour les langues qui s’affichent de gauche à droite, soit à côté à droite ou au-dessus à droite pour les langues qui s’affichent de droite à gauche. De même, une étiquette reliée à un bouton radio ou à une case à cocher est généralement positionnée après le champ.</p>
+			<p>Ces techniques sont les plus courantes mais il n’est pas exclu de faire autrement à partir du moment où étiquette et champ sont accolés.</p>
+			<p>Une étiquette accolée à un champ de manière prévisible aide l’utilisateur à se repérer plus facilement dans le formulaire, et à identifier plus facilement l’action qu’il doit effectuer pour chaque champ. C’est particulièrement important pour les utilisateurs ayant recours à une loupe d’écran&nbsp;: si l’étiquette est trop éloignée du champ qu’elle concerne, l’utilisateur la perdra de vue et ne saura pas quel champ il remplit.</p>
+		</article>
+
+		<article class="article" id="listesdechoix">
+			<h2>Listes de choix</h2>
+			<p>Les listes de choix (également appelées listes déroulantes) doivent être, comme tout champ de formulaire, étiquetées correctement.</p>
+			<form action="post" class="demo-form">
+				<label for="civilite">Civilité</label>
+				<select id="civilite">
+					<option>Madame</option>
+					<option>Monsieur</option>
+				</select>
+			</form>
+			<p>Si la liste de choix propose un certain nombre d’options pour lesquelles il est possible de faire des regroupements, alors il faut prévoir ces regroupements et leurs étiquettes respectives. Ces regroupements visuels et sémantiques aideront les utilisateurs à se repérer dans des listes de choix particulièrement longues.</p>
+			<form action="post" class="demo-form">
+				<label for="categorie">Catégorie de recherche</label>
+				<select id="categorie">
+					<optgroup label="Véhicules">
+						<option>Voitures</option>
+						<option>Motos</option>
+						<option>Bateaux</option>
+					</optgroup>
+					<optgroup label="Habitation">
+						<option>Vente</option>
+						<option>Achat</option>
+						<option>Location</option>
+					</optgroup>
+				</select>
+			</form>
+		</article>
+
+		<article class="article" id="regroupement">
+			<h2>Regroupement de champs</h2>
+			<p>Dans certains formulaires, il est nécessaire de créer des regroupements de champs. Ces regroupements de champs sont utiles pour ne pas induire certains utilisateurs, notamment aveugles, en erreur.</p>
+			<p>Par exemple, un formulaire d’achat en ligne propose un formulaire avec la saisie d’une adresse de livraison et une adresse de facturation. Puisque les deux vont posséder des champs avec des étiquettes similaires, il est impératif de créer un regroupement pour que l’utilisateur comprenne quelle adresse il renseigne.</p>
+			<div><img src="img/fieldset.jpg" alt="" /></div>
+			<p>Les autres cas typiques de regroupements nécessaires sont les groupes de cases à cocher ou de boutons radio.</p>
+			<p>En outre, les regroupements de champs doivent posséder eux aussi une étiquette pertinente.</p>
+		</article>
+
+		<article class="article" id="modificationdonnees">
+			<h2>Modification, mise à jour ou récupération des données</h2>
+			<p>Chaque formulaire devrait permettre à l’utilisateur de modifier, mettre à jour ou récupérer les informations qu’il a saisies. C’est particulièrement important pour les données à caractère financier, juridique ou personnel.</p>
+			<p>Pour les formulaires en une page, cela ne pose pas de problème particulier de conception du moment que les champs de saisie concernés restent modifiables à tout moment avant validation du formulaire.</p>
+			<p>Si les champs sont désactivés au fur et à mesure de la saisie, par exemple, il faut prévoir une page récapitulative avec la possibilité de modifier chaque champ.</p>
+		</article>
+
+		<article class="article" id="aidessaisie">
+			<h2>Aides à la saisie</h2>
+			<p>L’objectif des aides à la saisie est d’éviter aux utilisateurs de faire des erreurs lorsqu’ils remplissent un formulaire. Ces aides contextuelles ne sont nécessaires que lorsque l’étiquette rattachée au champ ne suffit pas à décrire le type de saisie attendue.</p>
+			<p>Deux types d’aides à la saisie peuvent ainsi être prévus dans les formulaires&nbsp;: d’une part, l’indication des champs obligatoires&nbsp;; d’autre part, l’indication du format attendu.</p>
+
+			<div id="champsobligatoires">
+				<h3>Champs obligatoires</h3>
+				<p>Le RGAA n’impose pas que les champs obligatoires soient systématiquement indiqués à l’utilisateur (par exemple, il est inutile de le faire sur le seul champ d’un moteur de recherche). Par contre, si vous indiquez les champs obligatoires, cela doit être fait de manière accessible. On identifie trois façons principales de faire.</p>
+				
+				<h4>Indication textuelle dans l’étiquette</h4>
+				<p>L’indication de champ obligatoire peut être mise directement dans son étiquette, par exemple&nbsp;: «&nbsp;Nom (champ obligatoire)&nbsp;». C’est la solution la plus simple.</p>
+
+				<h4>Indication par un symbole</h4>
+				<p>Il est aussi très courant de trouver l’indication de champs obligatoire au moyen d’un astérisque. Cette pratique est tout à fait conforme si vous donnez une légende à ce symbole, et ce <strong>avant</strong> le formulaire concerné.</p>
+
+				<h4>Indication par la couleur</h4>
+				<p>Si vous décidez de placer les étiquettes des champs obligatoires en rouge pour signifier les champs obligatoires, assurez-vous que cette couleur soit toujours doublée d’un symbole clairement explicité. En effet, un utilisateur aveugle n’a pas accès aux couleurs, et un utilisateur ne distinguant pas les couleurs ne pourra pas non plus les percevoir.</p>
+			</div>
+
+			<div id="formatattendu">
+				<h3>Format attendu</h3>
+				<p>L’aide contextuelle peut également informer l’utilisateur du format de saisie attendu.</p>
+				<p>Par exemple, si un champ de date attend que les valeurs jour, mois et année soient distinguées par une barre oblique pour être conforme, vous devez donc indiquer «&nbsp;jj/mm/aaaa&nbsp;», qui correspond au format de saisie.</p>
+				<p>La solution la plus simple est d’ajouter ce texte d’aide dans l’étiquette&nbsp;: il sera alors accessible à tous les utilisateurs, quel que soit leur handicap.</p>
+				<p>Mais il est également possible de recourir à des méthodes alternatives pour le faire de manière accessible (<abbr title="confer" lang="la">cf.</abbr> la <a href="https://disic.github.io/guide-integrateur/6-formulaires.html#aidessaisie">fiche consacrée aux formulaires dans le &laquo;&nbsp;Guide de l’intégrateur RGAA&nbsp;3&nbsp;&raquo;</a>).</p>
+			</div>
+		</article>
+
+		<article class="article" id="erreursdesaisie">
+			<h2>Erreurs de saisie</h2>
+			<p>Lorsque le formulaire retourne des erreurs après validation, l’erreur doit être mentionnée de manière explicite soit&nbsp;:</p>
+			<ul>
+				<li>dans l’étiquette du champ&nbsp;;</li>
+				<li>dans un passage de texte situé <b>avant</b> le formulaire, qui rassemble la liste de tous les champs erronés&nbsp;;</li>
+				<li>dans un passage de texte relié techniquement au champ de saisie.</li>
+			</ul>
+			<p>Au niveau AA, les messages d’erreur de saisie relative à l’utilisation d’un mauvais format de données, par exemple une erreur de saisie de courriel, doivent comporter un exemple de saisie réelle. Cela aide l’utilisateur à comprendre son erreur et à la corriger.</p>
+			<p>Note&nbsp;: si les erreurs sont indiquées au niveau de chaque champ, il n’est pas nécessaire de lister l’ensemble des erreurs en début de formulaire.</p>
+			<p>Par ailleurs, si les erreurs sont signalées après un rechargement de page, il faut prévoir la présence de l’expression «&nbsp;erreur sur le formulaire&nbsp;» dans le titre de la page (c’est à dire l’en-tête de la fenêtre).</p>
+			<div><img src="img/formulaire-erreur-titre.jpg" alt="" /></div>
+		</article>
+
+	</main>
+
+	<aside role="complementary" id="footer-block" class="clear">
+		<div class="col-1-2">
+			<h2 id="ailleurs">Voir ailleurs / Ressources</h2>
+			<ul>
+				<li><a href="https://disic.github.io/guide-impacts_utilisateurs/formulaires.html">Impacts utilisateurs des défauts d’accessibilité des formulaires</a></li>
+				<li><a href="https://disic.github.io/guide-integrateur/6-formulaires.html">Fiche «&nbsp;Formulaires&nbsp;» du &laquo;&nbsp;Guide de l’intégrateur RGAA&nbsp;3&nbsp;&raquo;</a></li>
+				<li><a href="https://disic.github.io/guide-integrateur/demo/6-formulaires/etiquettes.html">Page de démonstration de la construction HTML des étiquettes de formulaire</a></li>
+				<li><a href="demo/6-formulaires/regroupement.html">Page de démonstration pour les regroupements de champs</a></li>
+			</ul>
+		</div>
+		<div class="col-1-2">
+			<h2 id="criteres">Critères RGAA&nbsp;3</h2>
+			<ul>
+				<li>11.1 [A]</li>
+				<li>11.2 [A]</li>
+				<li>11.3 [AA]</li>
+				<li>11.4 [A]</li>
+				<li>11.5 [A]</li>
+				<li>11.6 [A]</li>
+				<li>11.7 [A]</li>
+				<li>11.8 [A]</li>
+				<li>11.9 [A]</li>
+				<li>11.10 [A]</li>
+				<li>11.11 [AA]</li>
+				<li>11.12 [AA]</li>
+				<li>11.13 [AA]</li>
+				<li>11.14 [AAA]</li>
+				<li>11.15 [AAA]</li>
+			</ul>
+		</div>
+	</aside>
+
+	<footer id="footer" role="contentinfo" class="clear">
+		<h2>Licence d’utilisation</h2>
+		<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l’action publique"></a></p>
+		<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l’action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+	</footer>
+
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

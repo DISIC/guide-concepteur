@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Fiche 7 : Présentation - Guide du concepteur RGAA 3</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="css/styles.css" media="all">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <script type="text/javascript" src="highlight/highlight.pack.js"></script>
+  <link rel="stylesheet" href="highlight/styles/tomorrow-night-eighties.css" media="all">
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<div class="main-header">
+	<div class="inside">
+		<ul class="skip-links">
+			<li><a href="#main">contenu</a></li>
+			<li><a href="#navigation">navigation</a></li>
+		</ul>
+		<header role="banner" class="header  clear" id="banner">
+			<h1 class="title">Guide du concepteur RGAA&nbsp;3</h1>
+		</header>
+
+		<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+			<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+			<ul class="sommaire is-hidden" id="sommaireToggle">
+				<li><a href="index.html">Introduction</a></li>
+				<li>
+					<a href="conception-fonctionnelle.html">Conception fonctionnelle</a>
+					<ul>
+						<li><a href="1-images.html">Fiche 1&nbsp;: Images</a></li>
+						<li><a href="2-tableaux.html">Fiche 2&nbsp;: Tableaux</a></li>
+						<li><a href="3-formulaires.html">Fiche 3&nbsp;: Formulaires</a></li>
+						<li><a href="4-navigation.html">Fiche 4&nbsp;: Navigation</a></li>
+						<li><a href="5-consultation.html">Fiche 5&nbsp;: Consultation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-graphique.html">Conception graphique</a>
+					<ul>
+						<li><a href="6-couleurs.html">Fiche 6&nbsp;: Couleurs</a></li>
+						<li><a href="7-presentation.html">Fiche 7&nbsp;: Présentation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-multimedia.html">Conception multimédia</a>
+					<ul>
+						<li><a href="8-multimedia.html">Fiche 8&nbsp;: Multimédia</a></li>
+					</ul>
+				</li>
+				<li><a href="glossaire.html">Glossaire</a></li>
+			</ul>
+		</nav>
+		<div class="github-link">
+			<p><a href="https://github.com/DISIC/guide-concepteur">Contribuer</a>
+			<a class="pdfdown" title="Télécharger le Guide du concepteur RGAA 3 (pdf, 1,6 Mo)" href="export/guide-concepteurs.pdf">Télécharger</a></p>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+
+	<nav role="navigation" class="internav clear">
+		<ul>
+			<li><a class="prev" href="6-couleurs.html"><span aria-hidden="true"> &laquo; </span> Fiche 6&nbsp;: Couleurs </a></li>
+			<li><a class="next" href="conception-multimedia.html">Conception multimédia <span aria-hidden="true"> &raquo; </span></a></li>
+		</ul>
+	</nav>
+
+	<main id="main" role="main">
+		<h1 class="fiche-title">Fiche 7&nbsp;: Présentation</h1>
+
+		<div class="bloc-haut">
+			<ul class="nav-context">			
+				<li><a href="#introduction">Introduction - cas utilisateurs</a></li>
+				<li><a href="#visibilite-liens">Visibilité des liens par rapport au texte environnant</a></li>
+				<li><a href="#alternatives-forme-taille-position">Alternatives pour l’information donnée par la forme, taille et position</a></li>
+				<li>
+					<a href="#personnalisation-affichage">Personnalisation de l’affichage</a>
+					<ul>
+						<li><a href="#alignement-textes">Alignement des textes</a></li>
+						<li><a href="#interlignage">Interlignage</a></li>
+						<li><a href="#largeur-textes">Largeur des textes</a></li>
+						<li><a href="#couleurs-contrastes">Personnalisation des couleurs et contrastes</a></li>
+						<li><a href="#exemple-personnalisation">Exemple de mécanisme de personnalisation</a></li>
+					</ul>
+				</li>
+				<li><a href="#ailleurs">Voir ailleurs / Ressources</a></li>
+				<li><a href="#criteres">Critères RGAA 3</a></li>
+			</ul>
+	
+			<aside role="complementary" class="clear resume">
+				<h2 id="resume">Synthèse</h2>
+				<ul>
+					<li>S’assurer que l’information n’est pas donnée uniquement par la forme ou la position d’un élément.</li>
+					<li>S’assurer que les liens sont correctement identifiables.</li>
+					<li>S’assurer que l’interlignage est suffisant.</li>
+					<li>S’assurer que la largeur des blocs de texte n’excède pas 80 caractères.</li>
+					<li>Donner la possibilité à l’utilisateur de contrôler la justification des textes.</li>
+					<li>Permettre à l’utilisateur de personnaliser la couleur de texte et la couleur d’arrière-plan lorsque les contrastes prévus par la charte graphique sont insuffisants.</li>
+				</ul>
+			</aside>
+		</div>
+
+		<article class="article" id="introduction">
+			<h2>Introduction - cas utilisateurs</h2>
+			<p>La mise en forme des textes est une problématique qui touche principalement les personnes ayant des troubles cognitifs (dyslexiques par exemple).</p>
+			<p>Par exemple, un interlignage trop faible est une difficulté supplémentaire pour ces utilisateurs. Il en sera de même pour une police fantaisiste, difficile à déchiffrer. En effet, certains utilisateurs ayant des difficultés de décodage (dyslexiques notamment) ont besoin d’avoir un texte calibré d’une certaine manière, afin de ne pas encombrer la compréhension. Une mise en forme qui ne respecte pas certains standards demande un effort supplémentaire à ces utilisateurs pour décoder, au détriment de la compréhension.</p>
+		</article>
+
+		<article class="article" id="visibilite-liens">
+			<h2>Visibilité des liens par rapport au texte environnant</h2>
+			<p>Les liens dont la nature n’est pas évidente sont des liens qui peuvent être confondus avec un texte normal non cliquable, lorsqu’ils sont signalés uniquement par la couleur et qu’ils ne sont pas soulignés.</p>
+			<p>Par exemple, dans le texte «&nbsp;Nouvelle grève à la SNCF&nbsp;», si le mot «&nbsp;grève&nbsp;» est un lien signalé uniquement par la couleur, sa nature peut être ignorée par les utilisateurs ne percevant pas la couleur et accédant au contenu CSS activées. En revanche, dans le texte «&nbsp;Nouvelle grève à la SNCF, lire la suite&nbsp;», si «&nbsp;lire la suite&nbsp;» est un lien, un utilisateur ne percevant pas les couleurs n’aura pas de problème pour en comprendre la nature.</p>
+			<p>La meilleure des solutions est de conserver le soulignement natif des liens s’ils se trouvent au sein d’un texte.</p>
+			<p>Autrement, si ces liens sont uniquement signalés par la couleur, alors vous devez vous assurer que le rapport de contraste entre la couleur du texte du lien et du texte environnant respecte un niveau minimum (3:1). La <a href="6-couleurs.html">fiche «&nbsp;Couleurs&nbsp;»</a> contient une <a href="6-couleurs.html#outils-calcul-contraste">liste d’outils d’évaluation de contrastes</a> à votre disposition pour tester ces éléments.</p>
+			<p>De plus, si vos liens en environnement de texte sont signalés uniquement par la couleur, votre seconde obligation est de définir un état au survol et à la prise de focus, qui ne soit pas un changement de couleur&nbsp;: par exemple, l’apparition d’un soulignement ou d’une forme.</p>
+		</article>
+
+		<article class="article" id="alternatives-forme-taille-position">
+			<h2>Alternatives pour l’information donnée par la forme, taille et position</h2>
+			<p>Comme pour les couleurs (<abbr title="confer" lang="la">cf.</abbr> <a href="6-couleurs.html">Fiche 6&nbsp;: Couleurs</a>), l’absence d’une alternative à une information donnée par la forme, la taille ou la position peut rendre un processus inutilisable ou un contenu incompréhensible pour les aveugles et les grands malvoyants.</p>
+			<p>Exemples d’indications données par la forme, la taille ou la position&nbsp;:</p>
+			<ul>
+				<li>indication donnée par la position&nbsp;: présence d’un marqueur visuel, pour indiquer la page active dans un menu de navigation&nbsp;;</li>
+				<li>indication donnée par la forme&nbsp;: mise en avant-plan pour indiquer un onglet actif&nbsp;;</li>
+				<li>indication donnée par la taille&nbsp;: modification de la taille de police dans un nuage de tags&nbsp;;</li>
+				<li>ou tout autre effet graphique similaire.</li>
+			</ul>
+			<p>Pour toute information donnée par la forme, la taille ou la position dans un texte, une image, un média temporel ou non temporel, il faut s’assurer qu’il existe un autre moyen d’accéder à cette information, et que cet autre moyen est pertinent, c’est-à-dire qu’il permet de transmettre l’information dans tous les contextes de consultation et pour tous les utilisateurs.</p>
+			<p>Pour en savoir plus, vous pouvez consulter la <a href="https://disic.github.io/guide-integrateur/10-infos-forme-couleur.html">fiche Informations par la forme et la couleur</a> contenue dans le <a href="https://disic.github.io/guide-integrateur/">Guide de l’intégrateur RGAA&nbsp;3</a>.</p>
+		</article>
+
+		<article class="article" id="personnalisation-affichage">
+			<h2>Personnalisation de l’affichage</h2>
+			<p class="important"><strong>Important</strong>&nbsp;: les recommandations ci-dessous ne relèvent pas du niveau minimum légal français. Il s’agit de recommandations de niveau AAA qui permettent l’accès à l’information à certains utilisateurs. Certaines sont parfois difficiles à mettre en œuvre. Elles restent malgré cela des recommandations importantes, voire indispensables, pour l’accès à l’information de certains utilisateurs.</p>
+
+			<p>Sachez donc que certaines des recommandations suivantes peuvent être atteintes en mettant en place des systèmes de configuration à disposition des utilisateurs. Par exemple, vous pouvez proposer un bouton sur votre site qui permettra de retirer toutes les justifications de texte, ou un bouton pour augmenter les interlignages. Rapprochez-vous de l’équipe technique en charge de votre site pour en savoir davantage sur ces mécanismes de personnalisation. Vous pouvez également voir un <a href="#exemple-personnalisation">exemple de mécanisme de personnalisation</a> plus loin dans cette page.</p>
+
+			<h3 id="alignement-textes">Alignement des textes</h3>
+			<p>Afin de conserver un espacement entre les mots qui reste constant, il est recommandé de ne pas justifier les textes. En effet, justifier un texte va modifier tous les espacements entre les mots, rendre ces espacements différents à chaque fois, et perturber la lecture et la compréhension des utilisateurs qui présentent des troubles de la lecture. Pour ces utilisateurs, il est préférable de conserver un espacement constant et donc de ne pas justifier les textes.</p>
+			<p>Cependant, la justification n’est pas interdite&nbsp;: il faut juste avoir conscience qu’elle peut perturber la lecture et la compréhension du texte chez certains utilisateurs.</p>
+			<p>Il est possible de donner la possibilité à l’utilisateur de désactiver la justification des textes présents sur un site, grâce à une barre d’outils spécialisée.</p>
+
+			<h3 id="interlignage">Interlignage</h3>
+			<p>Il est préférable d’avoir un interlignage suffisamment large. On demande à ce que l’interlignage, c’est à dire l’espace entre les lignes et les paragraphes, soit au moins équivalent à 1,5 fois la taille du texte.</p>
+			<p>Faute de quoi, on peut prévoir un mécanisme qui permet d’augmenter la valeur de l’interligne à 1,5 fois la taille du texte, au moins.</p>
+
+			<h3 id="largeur-textes">Largeur des textes</h3>
+			<p>Pour certains utilisateurs déficients visuels utilisant des loupes d’écrans ou ne disposant pas de visions centrale ou périphérique, une largeur de texte trop importante est très gênante pour la lecture.</p>
+			<p>On considère qu’une largeur de 80 caractères est la limite au-delà de laquelle les difficultés de lecture deviennent trop importantes.</p>
+			<p>Cette problématique est très difficile à prendre en charge sur une maquette habituelle et peut nécessiter de mettre en place des dispositifs de recomposition de la page, par exemple afficher le site sur une seule colonne de largeur maximale de 80 caractères.</p>
+			<p>Si le site est responsive, le mécanisme peut constituer à simuler sur un écran large l’affichage du site comme sur un mobile par exemple.</p>
+			
+			<h3 id="couleurs-contrastes">Personnalisation des couleurs et contrastes</h3>
+			<p>Dans la <a href="6-couleurs.html">Fiche 6&nbsp;: Couleurs</a>, nous avons vu que le contraste doit être suffisant entre la couleur de texte et la couleur d’arrière-plan des textes d’un site.</p>
+			<p>Cependant, les couleurs d’une charte graphique ne sont pas concernées par cette obligation de contraste. Ces couleurs et contrastes immuables peuvent toutefois poser des problèmes de lisibilité.</p>
+			<p>Ainsi, si les couleurs d’une charte graphique sont insuffisamment contrastées, la solution consiste à mettre à disposition des utilisateurs un mécanisme de personnalisation de l’interface. Dans l’idéal, ce mécanisme permettra&nbsp;:</p>
+			<ul>
+				<li>de renforcer les contrastes&nbsp;;</li>
+				<li>d’inverser les contrastes&nbsp;: par exemple en proposant une feuille de style passant le texte en jaune clair et les arrière-plans en  bleu foncé&nbsp;;</li>
+				<li>de laisser l’utilisateur sélectionner la couleur de texte et la couleur d’arrière-plan de son choix, et de mémoriser cette préférence à l’aide d’un cookie par exemple.</li>
+			</ul>			
+
+			<h3 id="exemple-personnalisation">Exemple de mécanisme de personnalisation</h3>
+			<p>Sur le site <a href="http://infos-parents-accessibles.education.gouv.fr/">Infos-Parents</a>, une barre d’outils intitulée «&nbsp;Paramètres d’accessibilité&nbsp;» permet de modifier le contraste entre la couleur de texte et la couleur d’arrière-plan du site, la police d’écriture, l’interlignage, mais permet également de sélectionner des couleurs personnalisées.</p>
+			<div><img src="img/infos-parents.jpg" alt="" /></div>
+			<div><img src="img/infos-parents-contraste.jpg" alt="" /></div>
+
+		</article>
+
+	</main>
+
+	<aside role="complementary" id="footer-block" class="clear">
+		<div class="col-1-2">
+			<h2 id="ailleurs">Voir ailleurs / Ressources</h2>
+			<ul>
+				<li><a href="https://disic.github.io/guide-impacts_utilisateurs/presentation.html">Impacts utilisateurs des défauts d’accessibilité en matière de présentation</a></li>
+				<li><a href="https://disic.github.io/guide-impacts_utilisateurs/liens.html">Impacts utilisateurs des défauts d’accessibilité en matière de liens</a></li>
+			</ul>
+		</div>
+		<div class="col-1-2">
+			<h2 id="criteres">Critères RGAA&nbsp;3</h2>
+			<ul>
+				<li>10.6 [A]</li>
+				<li>10.8 [AAA]</li>
+				<li>10.9 [AAA]</li>
+				<li>10.11 [AAA]</li>
+				<li>10.12 [AAA]</li>
+				<li>10.14 [A]</li>
+			</ul>
+		</div>
+	</aside>
+
+	<footer id="footer" role="contentinfo" class="clear">
+		<h2>Licence d’utilisation</h2>
+		<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l’action publique"></a></p>
+		<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l’action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+	</footer>
+
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

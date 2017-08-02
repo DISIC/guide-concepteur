@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Guide du concepteur RGAA 3</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="css/styles.css" media="all">
+  <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+<div class="main-header">
+	<div class="inside">
+		<ul class="skip-links">
+			<li><a href="#main">contenu</a></li>
+			<li><a href="#navigation">navigation</a></li>
+		</ul>
+		<header role="banner" class="header  clear" id="banner">
+			<h1 class="title">Guide du concepteur RGAA&nbsp;3</h1>
+		</header>
+
+		<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+			<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+			<ul class="sommaire is-hidden" id="sommaireToggle">
+				<li><a href="index.html">Introduction</a></li>
+				<li>
+					<a href="conception-fonctionnelle.html">Conception fonctionnelle</a>
+					<ul>
+						<li><a href="1-images.html">Fiche 1&nbsp;: Images</a></li>
+						<li><a href="2-tableaux.html">Fiche 2&nbsp;: Tableaux</a></li>
+						<li><a href="3-formulaires.html">Fiche 3&nbsp;: Formulaires</a></li>
+						<li><a href="4-navigation.html">Fiche 4&nbsp;: Navigation</a></li>
+						<li><a href="5-consultation.html">Fiche 5&nbsp;: Consultation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-graphique.html">Conception graphique</a>
+					<ul>
+						<li><a href="6-couleurs.html">Fiche 6&nbsp;: Couleurs</a></li>
+						<li><a href="7-presentation.html">Fiche 7&nbsp;: Présentation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-multimedia.html">Conception multimédia</a>
+					<ul>
+						<li><a href="8-multimedia.html">Fiche 8&nbsp;: Multimédia</a></li>
+					</ul>
+				</li>
+				<li><a href="glossaire.html">Glossaire</a></li>
+			</ul>
+		</nav>
+		<div class="github-link">
+			<p><a href="https://github.com/DISIC/guide-concepteur">Contribuer</a>
+			<a class="pdfdown" title="Télécharger le Guide du concepteur RGAA 3 (pdf, 1,6 Mo)" href="export/guide-concepteurs.pdf">Télécharger</a></p>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+
+	<nav role="navigation" class="internav clear">
+		<ul>
+			<li><a class="next" href="conception-fonctionnelle.html">Conception fonctionnelle <span aria-hidden="true"> &raquo; </span></a></li>
+		</ul>
+	</nav>
+
+	<main id="main" role="main">
+		<article class="article">
+			<p>Ce guide du concepteur vous est proposé dans le cadre des ressources accompagnant la prise en main de la version&nbsp;3 du référentiel général d’accessibilité pour les administrations (RGAA&nbsp;3).</p>
+			<p>Toutes les règles et tous les exemples d’implémentation donnés ici se réfèrent à la version&nbsp;3 du RGAA.</p>
+			<p>Le RGAA&nbsp;3 est composé d’un <a href="http://references.modernisation.gouv.fr/rgaa/introduction-RGAA.html">document d’introduction</a>, d’un <a href="http://references.modernisation.gouv.fr/rgaa/guide-accompagnement-RGAA.html">guide d’accompagnement</a> et d’un <a href="http://references.modernisation.gouv.fr/rgaa/criteres.html">référentiel technique</a>. Cet ensemble de documents a une portée réglementaire puisqu’ils ont été rendus officiels par l’<a href="http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000030540064&amp;dateTexte=20150921">arrêté du 29 avril 2015</a>, lui-même venant préciser l’<a href="http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000809647&amp;fastPos=1&amp;fastReqId=1497340759&amp;categorieLien=cid&amp;oldAction=rechTexte#LEGIARTI000006682279">article 47 de la loi&nbsp;2005-102 du 11 février 2005</a> et l’<a href="http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000030540064&amp;categorieLien=id">arrêté&nbsp;2009-546 du 14 mai 2009</a>.</p>
+			<p>Les ressources complémentaires sont des supports sans valeur réglementaire et visent à vous aider à rendre vos contenus numériques accessibles et conformes au RGAA&nbsp;3.</p>
+		</article>
+		<article class="article">
+			<h2 id="&#224;-qui-sadresse-ce-guide">&#192; qui s’adresse ce guide&#160;?</h2>
+			<p>Ce guide s’adresse aux designers d’expérience utilisateur (<abbr title="user experience" lang="en">UX</abbr>), aux ergonomes, aux architectes de l’information, aux directeurs artistiques, aux designers d’interfaces (<abbr title="user interface" lang="en">UI</abbr>), aux web designers, aux graphistes, aux designers de contenus multimédia, aux vidéastes, mais aussi aux chefs de projet, aux directeurs de création ainsi qu’aux responsables de la maîtrise d’œuvre.</p>
+			<p>Il n’est pas nécessaire de savoir lire ni écrire du code HTML pour utiliser ce guide.</p>
+			<h3 id="&#224;-chacun-son-m&#233;tier">&#192; chacun son m&#233;tier</h3>
+			<p>Certaines problématiques ne sont volontairement pas abordées, car elles dépendent d’autres acteurs que le concepteur. Par exemple, le sens de lecture, la structure du document ou les légendes d’images ne sont pas du ressort du concepteur, mais de l’intégrateur. Ces problématiques sont abordées dans le <a href="https://disic.github.io/guide-integrateur/">Guide de l’intégrateur RGAA&nbsp;3</a>. Les problématiques liées à la contribution quant à elles sont abordées dans le Guide <a href="http://disic.github.io/guide-contribuer_accessible/index.html">Contribuer sur le web de manière accessible</a>.</p>
+		</article>
+		<article class="article">
+			<h2 id="mode-demploi-du-guide">Mode d’emploi du guide</h2>
+			<p>Il est fréquent qu’une même personne exerce différentes fonctions, notamment dans les structures de petite taille. Aussi, les problématiques d’accessibilité couvertes par ce guide sont organisées par type de conception, plutôt que par profil de concepteur.</p> 
+			<p>Ce guide a donc été pensé sous forme de fiches pratiques, réunies par type de conception, et construites sur le même modèle pour en faciliter l’utilisation. Vous pouvez les lire en fonction de vos besoins, sans avoir à suivre un ordre particulier, chaque fiche étant indépendante.</p>
+			<p>Chaque fiche contient les sections suivantes&nbsp;:</p>
+			<ul>
+				<li><strong>Synthèse</strong>&nbsp;: nous y résumons les points essentiels de chaque fiche à retenir&nbsp;;</li>
+				<li><strong>Enjeux pour l’utilisateur handicapé</strong> : cette section vient expliciter l’importance des recommandations décrites pour les utilisateurs concernés&nbsp;;</li>
+			</ul>
+			<p>En fonction des fiches, vous pourrez également trouver&nbsp;:</p>
+			<ul>
+				<li><strong>Voir aussi</strong>&nbsp;: nous y indiquons des liens vers d’autres guides édités dans le cadre des ressources complémentaires au RGAA&nbsp;3&nbsp;;</li>
+				<li><strong>Voir ailleurs</strong>&nbsp;: nous listons une sélection de ressources tierces dont la qualité et la complémentarité à l’approche adoptée dans ce guide nous semblent intéressantes.</li>
+			</ul>
+			<p>Enfin, vous retrouverez toujours au bas de la fiche&nbsp;:</p>
+			<ul>
+				<li><strong>Correspondances RGAA 3</strong>&nbsp;: les correspondances avec les critères du référentiel technique du RGAA&nbsp;3.</li>
+			</ul>
+		</article>
+		<article class="article" id="plan-du-guide">
+			<h2>Plan du guide</h2>
+			<ul>
+				<li>
+					<a href="conception-fonctionnelle.html">Conception fonctionnelle</a>
+					<ul>
+						<li><a href="1-images.html">Fiche 1&nbsp;: Images</a></li>
+						<li><a href="2-tableaux.html">Fiche 2&nbsp;: Tableaux</a></li>
+						<li><a href="3-formulaires.html">Fiche 3&nbsp;: Formulaires</a></li>
+						<li><a href="4-navigation.html">Fiche 4&nbsp;: Navigation</a></li>
+						<li><a href="5-consultation.html">Fiche 5&nbsp;: Consultation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-graphique.html">Conception graphique</a>
+					<ul>
+						<li><a href="6-couleurs.html">Fiche 6&nbsp;: Couleurs</a></li>
+						<li><a href="7-presentation.html">Fiche 7&nbsp;: Présentation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-contenus-multimedia.html">Conception multimédia</a>
+					<ul>
+						<li><a href="9-multimedia.html">Fiche 9&nbsp;: Multimédia</a></li>
+					</ul>
+				</li>
+			</ul>
+		</article>
+		<article class="article">
+			<h2 id="contribution-web-et-rgaa-3">Conception web et RGAA 3</h2>
+			<p>Th&#233;matiques du RGAA&nbsp;3 abord&#233;es &#224; travers ces fiches&#160;:</p>
+			<ul>
+				<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#images">Images</a></li>
+				<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#couleurs">Couleurs</a></li>
+				<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#multimedia">Multimédia</a></li>
+				<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#tableaux">Tableaux</a></li>
+				<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#presentation">Présentation de l’information</a></li>
+				<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#formulaire">Formulaires</a></li>
+				<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#navigation">Navigation</a></li>
+				<li><a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#consultation">Consultation</a></li>
+			</ul>
+		</article>
+		<article class="article">
+			<h2 id="guides-connexes">Ressources connexes et références</h2>
+				<ul>
+					<li><a href="https://github.com/DISIC/guide-impacts_utilisateurs">Défauts d’accessibilité&nbsp;: impacts sur les utilisateurs</a></li>
+					<li><a href="https://disic.github.io/guide-integrateur/">Guide de l’intégrateur RGAA&nbsp;3</a></li>
+					<li><a href="http://disic.github.io/guide-contribuer_accessible/">Contribuer sur le web de manière accessible</a></li>
+					<li><a href="http://disic.github.io/rgaa_methodologie/">Méthodologie de test RGAA 3</a><li>
+					<li><a href="https://www.w3.org/TR/WCAG20-TECHS/" hreflang="en">Liste des techniques et échecs WCAG&nbsp;2.0 (ressource en anglais)</a></li>
+			</ul>
+		</article>
+	</main>
+
+
+
+	<footer id="footer" role="contentinfo" class="clear">
+		<h2>Licence d’utilisation</h2>
+		<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l’action publique"></a></p>
+		<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l’action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+	</footer>
+
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

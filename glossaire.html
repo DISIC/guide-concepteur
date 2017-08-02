@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<title>Glossaire - Guide du concepteur RGAA 3</title>
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="css/styles.css" media="all">
+		<link rel="stylesheet" href="css/print.css" media="print">
+		<script type="text/javascript" src="highlight/highlight.pack.js"></script>
+		<link rel="stylesheet" href="highlight/styles/tomorrow-night-eighties.css" media="all">
+		<script>hljs.initHighlightingOnLoad();</script>
+	</head>
+	<body>
+		<div class="main-header">
+			<div class="inside">
+				<ul class="skip-links">
+					<li><a href="#main">contenu</a></li>
+					<li><a href="#navigation">navigation</a></li>
+				</ul>
+				<header role="banner" class="header  clear" id="banner">
+					<h1 class="title">Guide du concepteur RGAA&nbsp;3</h1>
+				</header>
+
+				<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+					<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+					<ul class="sommaire is-hidden" id="sommaireToggle">
+						<li><a href="index.html">Introduction</a></li>
+						<li>
+							<a href="conception-fonctionnelle.html">Conception fonctionnelle</a>
+							<ul>
+								<li><a href="1-images.html">Fiche 1&nbsp;: Images</a></li>
+								<li><a href="2-tableaux.html">Fiche 2&nbsp;: Tableaux</a></li>
+								<li><a href="3-formulaires.html">Fiche 3&nbsp;: Formulaires</a></li>
+								<li><a href="4-navigation.html">Fiche 4&nbsp;: Navigation</a></li>
+								<li><a href="5-consultation.html">Fiche 5&nbsp;: Consultation</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="conception-graphique.html">Conception graphique</a>
+							<ul>
+								<li><a href="6-couleurs.html">Fiche 6&nbsp;: Couleurs</a></li>
+								<li><a href="7-presentation.html">Fiche 7&nbsp;: Présentation</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="conception-multimedia.html">Conception multimédia</a>
+							<ul>
+								<li><a href="8-multimedia.html">Fiche 8&nbsp;: Multimédia</a></li>
+							</ul>
+						</li>
+						<li><a href="glossaire.html">Glossaire</a></li>
+					</ul>
+				</nav>
+				<div class="github-link">
+					<p><a href="https://github.com/DISIC/guide-concepteur">Contribuer</a>
+					<a class="pdfdown" title="Télécharger le Guide du concepteur RGAA 3 (pdf, 1,6 Mo)" href="export/guide-concepteurs.pdf">Télécharger</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div id="wrapper">
+			
+			<nav role="navigation" class="internav clear">
+				<ul>
+					<li><a class="prev" href="8-multimedia.html"><span aria-hidden="true"> &laquo; </span> Fiche 8&nbsp;: Multimédia</a></li>
+				</ul>
+			</nav>
+			
+			<main id="main" role="main">
+				<h1 class="fiche-title">Glossaire</h1>
+				<article class="article">
+					<h2 id="attribut-title">Attribut <code lang="en">title</code></h2>
+					<p>L’attribut HTML <code lang="en">title</code> peut s’utiliser sur tout élément HTML, mais on le croise plus souvent sur les liens et les abréviations. Il apporte une information complémentaire relative à l’élément concerné. Cet attribut se caractérise par l’apparition d’une infobulle native au survol de cet élément.</p>
+				</article>
+				<article class="article">
+					<h2 id="lecteur-decran">Lecteur d’écran</h2>
+					<p>Un lecteur d’écran est un logiciel utilisé principalement par les personnes ayant des déficiences visuelles (personnes malvoyantes ou aveugles) ou des déficiences cognitives (dyslexie par exemple). Un lecteur d’écran parcourt le code d’un logiciel ou d’un site web et retranscrit vocalement (à l’aide d’une synthèse vocale) et/ou vers une plage braille le contenu et sa structure.</p>
+					<p>Un lecteur d’écran permet autant de naviguer sur le web, que d’utiliser un ordinateur ou tout autre logiciel.</p>
+				</article>
+				<article class="article">
+					<h2 id="taille-caracteres-contraste">Jusqu’à ou à partir de 150% (<code>1.5em</code>) de la taille de police par défaut sans effet de graisse. Jusqu’à ou à partir de 120% (<code>1.2em</code>) de la taille de police par défaut en gras.</h2>
+					<p>D’après le RGAA&nbsp;3, ces deux mesures déterminent la taille relative des caractères correspondant à une taille de caractères équivalent à 14 points gras ou 18 points sans effet de graisse en considérant que la police de corps (<code>body</code>) est à 100%.</p>
+					<p>Note&nbsp;: «&nbsp;jusqu’à 150% et jusqu’à 120%&nbsp;» signifie que la taille des caractères est strictement inférieure à 150 ou 120%. «&nbsp;À partir de 150% et à partir de 120%&nbsp;» signifie que la taille des caractères est égale ou supérieure à 150 ou 120%.</p>
+					<p>La taille de police par défaut est la taille définie par l’auteur pour le document ou, en son absence, la taille par défaut utilisée par l’agent utilisateur (<abbr title="id est" lang="la">ie</abbr> le navigateur).</p>
+				</article>
+				<article class="article">
+					<h2 id="maquette-fonctionnelle-wireframe">Maquette fonctionnelle - <span lang="en">wireframe</span></h2>
+					<p>Une maquette fonctionnelle (<span lang="en">wireframe</span> en anglais) est un schéma utilisé pendant la conception d’une interface pour définir les zones et composants qu'elle doit contenir. Cette maquette fonctionnelle servira de référence au travail de production graphique et technique. Une maquette fonctionnelle peut prendre la forme d’un croquis, d’un collage ou d’un schéma numérique.</p>
+				</article>
+				<article class="article">
+					<h2 id="texte-de-remplacement">Texte de remplacement</h2>
+					<p>Le texte de remplacement d’une image est un texte non visible lors d’une consultation d’un site sans technologie d’assistance. Ce texte de remplacement est vocalisé par un lecteur d’écran et permet aux utilisateurs présentant une déficience visuelle d’accéder au contenu de l’image.</p>
+				</article>
+
+			</main>
+
+			
+			
+			<footer id="footer" role="contentinfo" class="clear">
+				<h2>Licence d’utilisation</h2>
+				<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l’action publique"></a></p>
+				<p>Ce document est la propriété du Secrétariat général à la modernisation de l’action publique fran&#231;ais (SGMAP). Il est placé sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ultérieure</a>, équivalente à une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternité, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+				
+			</footer>
+
+		</div>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Fiche 8 : Multimédia - Guide du concepteur RGAA 3</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="css/styles.css" media="all">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <script type="text/javascript" src="highlight/highlight.pack.js"></script>
+  <link rel="stylesheet" href="highlight/styles/tomorrow-night-eighties.css" media="all">
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<div class="main-header">
+	<div class="inside">
+		<ul class="skip-links">
+			<li><a href="#main">contenu</a></li>
+			<li><a href="#navigation">navigation</a></li>
+		</ul>
+		<header role="banner" class="header  clear" id="banner">
+			<h1 class="title">Guide du concepteur RGAA&nbsp;3</h1>
+		</header>
+
+		<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+			<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+			<ul class="sommaire is-hidden" id="sommaireToggle">
+				<li><a href="index.html">Introduction</a></li>
+				<li>
+					<a href="conception-fonctionnelle.html">Conception fonctionnelle</a>
+					<ul>
+						<li><a href="1-images.html">Fiche 1&nbsp;: Images</a></li>
+						<li><a href="2-tableaux.html">Fiche 2&nbsp;: Tableaux</a></li>
+						<li><a href="3-formulaires.html">Fiche 3&nbsp;: Formulaires</a></li>
+						<li><a href="4-navigation.html">Fiche 4&nbsp;: Navigation</a></li>
+						<li><a href="5-consultation.html">Fiche 5&nbsp;: Consultation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-graphique.html">Conception graphique</a>
+					<ul>
+						<li><a href="6-couleurs.html">Fiche 6&nbsp;: Couleurs</a></li>
+						<li><a href="7-presentation.html">Fiche 7&nbsp;: Présentation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-multimedia.html">Conception multimédia</a>
+					<ul>
+						<li><a href="8-multimedia.html">Fiche 8&nbsp;: Multimédia</a></li>
+					</ul>
+				</li>
+				<li><a href="glossaire.html">Glossaire</a></li>
+			</ul>
+		</nav>
+		<div class="github-link">
+			<p><a href="https://github.com/DISIC/guide-concepteur">Contribuer</a>
+			<a class="pdfdown" title="Télécharger le Guide du concepteur RGAA 3 (pdf, 1,6 Mo)" href="export/guide-concepteurs.pdf">Télécharger</a></p>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+
+	<nav role="navigation" class="internav clear">
+		<ul>
+			<li><a class="prev" href="conception-multimedia.html"><span aria-hidden="true"> &laquo; </span>Conception multimédia </a></li>
+			<li><a class="next" href="glossaire.html">Glossaire <span aria-hidden="true"> &raquo; </span></a></li>
+		</ul>
+	</nav>
+
+	<main id="main" role="main">
+		<h1 class="fiche-title">Fiche 8&nbsp;: Multimédia</h1>
+
+		<div class="bloc-haut">
+			<ul class="nav-context">
+				<li><a href="#introduction">Introduction - cas utilisateurs</a></li>
+				<li><a href="#identifier">Identifier le média</a></li>
+				<li><a href="#comprehension-medias-sans-son">Permettre la compréhension d’un média sans le son</a></li>
+				<li><a href="#comprehension-medias-sans-image">Permettre la compréhension d’un média sans l’image</a></li>
+				<li><a href="#nontemporel">Médias non temporels</a></li>
+
+				<li><a href="#ailleurs">Voir ailleurs / Ressources</a></li>
+				<li><a href="#voir-aussi">Voir aussi</a></li>
+				<li><a href="#criteres">Critères RGAA</a></li>
+				<li><a href="#note-concernant-les-niveaux-de-conformite">Note concernant les niveaux de conformité</a></li>
+			</ul>
+	
+			<aside role="complementary" class="clear resume">
+				<h2 id="resume">Synthèse</h2>
+				<ul>
+					<li>Faire précéder tous les médias d’un titre.</li>
+					<li>Accompagner chaque vidéo d’une transcription textuelle ou d’une audiodescription synchronisée.</li>
+					<li>Fournir des sous-titres synchronisés pour chaque vidéo.</li>
+					<li>S’assurer que les dialogues sont suffisamment audibles.</li>
+					<li>Accompagner chaque vidéo d’une traduction en langue des signes si possible.</li>
+					<li>Ne pas déclencher de média automatiquement.</li>
+					<li>Fournir un lien clairement identifié permettant d’accéder à l’alternative accessible des médias non temporels.</li>
+				</ul>
+			</aside>
+		</div>
+
+		<article class="article" id="introduction">
+			<h2>Introduction - cas utilisateurs</h2>
+			<p>La majeure partie des contenus multimédias que vous rencontrerez sont des vidéos (avec ou sans bande-son) ou des fichiers sons.</p>
+			<p>Entrent également dans la catégorie de contenus multimédias, les éléments interactifs comme les animations ou publicités en Flash par exemple.</p>
+			<p>Tous les utilisateurs sont impactés par cette thématique puisque tous les sens sont sollicités dans la plupart des vidéos&nbsp;: la vue pour voir les images et les actions à l’écran, l’ouïe pour entendre les paroles et la motricité pour arrêter ou relancer la vidéo.</p>
+			<p>La grande majorité des critères de la thématique «&nbsp;Multimédia&nbsp;» du RGAA 3 se concentrent sur les alternatives mises à disposition des utilisateurs (sous-titres, transcription textuelle, audiodescription…), qui doivent être prévues lors de la phase de conception du site.</p>
+			<p>D’autres critères concernent les composants interactifs permettant de contrôler les contenus multimédias (les boutons de lecture, pause, volume, etc.). Ces problématiques seront traitées dans un futur guide à destination des développeurs.</p>
+		</article>
+		
+		<article class="article" id="identifier">
+			<h2>Identifier le média</h2>
+			<p>Lorsque vous insérez du contenu multimédia dans une page web, vous devez l’identifier, le mieux étant de le faire précéder d’un titre.</p>
+			<p>Ce titre peut reprendre celui de l’élément lui-même s’il en possède un. Il doit permettre de comprendre quelle est l’information présentée dans ce contenu. Tout élément multimédia doit être considéré comme un contenu à part entière et donc être structuré par un titre. Nous vous renvoyons à la fiche <a href="http://disic.github.io/guide-contribuer_accessible/titres.html">«&nbsp;Les titres, ou le plan de la page&nbsp;»</a> du guide Contribuer sur le web de manière accessible pour la mise en place de ce titre.</p>
+		</article>
+
+		<article class="article" id="comprehension-medias-sans-son">
+			<h2>Permettre la compréhension d’un média sans le son</h2>
+
+			<h3 id="sous-titres">Sous-titres</h3>
+			<p>Il ne faut pas confondre le sous-titrage pour la traduction (<i lang="en">subtitles</i>) et le sous-titrage pour sourds et malentendants (<i lang="en">closed captions</i>). Ces deux types de sous-titrage poursuivent des buts différents. Dans le cadre du RGAA&nbsp;3.0, les sous-titres doivent être rédigés dans la langue du média concerné. Ainsi, si la vidéo est en anglais par exemple, les sous-titres doivent être en anglais.</p>
+			<p>Les sous-titres ne concernent que les vidéos. Ils doivent reprendre toutes les informations descriptives de la vidéo&nbsp;: les dialogues de personnages, la voix-off ou même un bruit qui donne un sens et qui permet de comprendre une action.</p>
+			<p>Les sous-titres doivent êtres correctement synchronisés. En outre, ils doivent être activables et désactivables depuis le lecteur. Si le lecteur ne propose pas cette fonctionnalité, alors il est possible de mettre deux vidéos à disposition&nbsp;: une vidéo sans les sous-titres et une vidéo avec les sous-titres. Chacune peut être placée sur une page différente, l’important est que l’utilisateur comprenne aisément qu’il existe une version avec les sous-titres. Le plus simple sera alors de créer un lien avant la vidéo sans les sous-titres qui mène vers la vidéo avec les sous-titres et au-dessus de la vidéo avec les sous-titres, créer un lien qui ramène vers la vidéo sans les sous-titres.</p>
+			<p>Ci-dessous, un exemple de vidéo avec des sous-titres. <a href="http://www.accessibilite.sncf.com/actualites/a-la-une/article/video-sncf-24-24-sur-acces-plus">Retrouvez cet exemple sur le site de la Direction de l'Accessibilité SNCF</a>.</p>
+			<div><img src="img/sous-titres.png" alt="" /></div>
+			<p class="important"><strong>Important</strong>&nbsp;: les incrustations de texte et les sous-titres sont soumis aux mêmes exigences que les textes en matière de contrastes. Référez-vous au <a href="6-couleurs.html#contrastes">chapitre «&nbsp;Contrastes&nbsp;»</a> de la fiche&nbsp;6&nbsp;: Couleurs pour en savoir plus. De même, en France, des <a href="#charte-sous-titres-france">normes en matière de code couleur</a> existent pour les sous-titres pour personnes sourdes et malentendantes.</p>
+
+			<h3 id="pensez-à-la-langue-des-signes-lsf">Pensez à la langue des signes (LSF)</h3>
+			<p>Les sous-titres ne sont pas forcément une alternative suffisante pour les personnes malentendantes. En effet, certaines personnes sourdes ou malentendantes ne lisent et ne comprennent que la langue des signes. C’est pourquoi prévoir en amont une traduction du contenu audio en LSF constitue une alternative complémentaire de haute qualité.</p>
+			<p>Dans ce cas, la traduction en LSF doit être accolée à la vidéo, même pour les vidéos diffusées en direct. Vous pouvez voir un <a href="http://www.fiphfp.fr/Temoignages/Temoignages-d-agents/Martine-Rahal">exemple de vidéo traduite en LSF</a>&nbsp;: pour cela, il faut activer l’option «&nbsp;Afficher la version avec langue des signes&nbsp;» dans le lecteur vidéo.</p>
+			<div><img src="img/video-lsf.jpg" alt="" /></div>
+		
+			<h3 id="transcription-textuelle">Transcription textuelle</h3>
+			<p>La transcription textuelle concerne les vidéos et les fichiers audios seuls.</p>
+			<p>Une transcription textuelle est la retranscription en texte de tous les contenus audibles et informatifs de la vidéo. Elle reprend&nbsp;:</p>
+			<ul>
+				<li>la totalité de ce qui y est exprimé oralement ;</li>
+				<li>toutes les informations descriptives nécessaires à une compréhension équivalente de l’action.</li>
+			</ul>
+			<p>Ces informations textuelles doivent être présentées dans l’ordre chronologique de leur apparition dans la vidéo.</p>
+			<p>Une transcription textuelle est un contenu texte structuré, comme tout autre contenu texte. Selon les besoins, n’hésitez pas à utiliser les listes, les titres, etc.</p>
+			<h4 id="mise-a-disposition-transcription-textuelle">Mise à disposition de la transcription textuelle</h4>
+			<p>La mise à disposition pour les utilisateurs de cette transcription textuelle peut se faire de plusieurs manières&nbsp;:</p>
+			<ul>
+				<li>elle peut être située juste en dessous de la vidéo elle-même, en précisant de quoi il s’agit&nbsp;;</li>
+				<li>elle peut également être située dans une autre page que celle de la vidéo. Il suffit alors de placer un lien sous la vidéo qui mène vers cette page.</li>
+			</ul>
+			<p>Ci-dessous, un exemple de transcription textuelle située directement sous la vidéo (<a href="http://www.fiphfp.fr/Temoignages/Temoignages-d-agents/Lionel-Scarlatti">Retrouvez cet exemple sur le site du FIPHFP</a>).</p>
+			<div><img src="img/transcription-textuelle.jpeg" alt=""></div>
+			<h4 id="videos-en-direct">Cas des vidéos diffusées en direct</h4>
+			<p>Pour les vidéos diffusées en direct, il convient de mettre à disposition de l’utilisateur soit des sous-titres synchronisés, soit une transcription textuelle. Celle-ci doit être accessible de la même façon que toute autre transcription textuelle de vidéo (cf. <a href="#mise-a-disposition-transcription-textuelle">Mise à disposition de la transcription textuelle</a>).</p>
+		</article>
+
+		<article class="article" id="comprehension-medias-sans-image">
+			<h2>Permettre la compréhension d’un média sans l’image</h2>
+			<h3 id="audiodescription">Audiodescription</h3>
+			<p>L’audiodescription ne concerne que les vidéos.</p>
+			<p>Une audiodescription est une narration ajoutée à la piste sonore de la vidéo pour décrire les détails visuels importants qui ne peuvent être compris à partir de la piste sonore principale seulement.</p>
+			<p>L’audiodescription d’une vidéo fournit de l’information à propos des actions, des personnages, des changements de scènes, du texte apparaissant à l’écran et d’autres contenus visuels (par exemple, les mimiques signifiantes, comme quelqu’un qui approuverait de la tête en silence). Vous pouvez écouter un <a href="http://www.fiphfp.fr/Temoignages/Temoignages-d-agents/Martine-Rahal">exemple de vidéo audiodécrite</a> : pour cela, il faut activer l’option «&nbsp;Activer l’audio description&nbsp;» dans le lecteur vidéo.</p>
+			<div><img src="img/audiodescription.jpg" alt="" /></div>
+			<p>Lorsque toute l’information de la vidéo est déjà donnée dans la piste audio, aucune audiodescription supplémentaire n’est requise. Par exemple, dans le cadre d’une interview, il est facile d’éviter le besoin d’audiodescription en annonçant le nom et la fonction des interlocuteurs, qui sont souvent repris en cartouche visuellement. Si ce besoin de description sonore est anticipé, l’audiodescription peut devenir superflue. Prendre en compte ce besoin en conception est moins coûteux, alors pensez-y&nbsp;!</p>
+			<p>L’audiodescription doit être synchronisée avec la vidéo, et comme les sous-titres, elle doit pouvoir être activée et désactivée.</p>
+
+			<h3 id="volume-des-dialogues">Volume des dialogues</h3>
+			<p>Dans le cas de fichiers sons seuls, vous devez veiller à ce que les dialogues soient suffisamment audibles. Plusieurs solutions sont possibles si ce n’est pas le cas&nbsp;:</p>
+			<ul>
+				<li>votre lecteur permet de désactiver l’arrière-plan sonore&nbsp;;</li>
+				<li>il existe une version alternative de la vidéo sans l’arrière-plan sonore ou avec un volume des dialogues plus élevés.</li>
+			</ul>
+
+			<h3 id="pas-de-lancement-automatique">Pas de lancement automatique</h3>
+			<p>Vous devez éviter au maximum de lancer les contenus multimédia qui comportent du son automatiquement au chargement de la page. Ces paramètres existent souvent pour les vidéos que l’on intègre&nbsp;: or, même si on donne à l’utilisateur la possibilité de désactiver le son, il est préférable de ne pas rendre la lecture automatique.</p>
+
+		</article>
+
+
+		
+		<article class="article" id="nontemporel">
+			<h2>Médias non temporels</h2>
+			<p>Par «&nbsp;médias non temporels&nbsp;», le RGAA désigne des médias créés avec des technologies différentes de HTML, CSS et JavaScript. Il s’agit en général d’animations ou d’activités interactives réalisées à l’aide d’une technologie qui nécessite une extension comme Flash, Java ou <span lang="en">Silverlight</span>.</p>
+			<p>Les exigences en matière d’accessibilité web pour les médias non temporels dépendent de la technologie que vous allez utiliser pour les produire&nbsp;:</p>
+			<ul>
+				<li>médias non temporels produits avec Flash ou Java&nbsp;: une alternative est nécessaire. En effet, même si de nombreux standards d’accessibilité permettent en théorie de rendre un média Flash accessible, des utilisateurs ayant recours à des modes d’interaction très spécifiques ne réussiront jamais à l’utiliser.</li>
+				<li>médias non temporels produits avec <span lang="en">Silverlight</span>&nbsp;: une alternative peut être nécessaire.</li>
+			</ul>
+			<p>Note&nbsp;: les médias produits avec <code>svg</code> ou <code>canvas</code> ne sont pas considérés comme des médias non temporels. En effet, ce sont des médias avec lesquels on utilise généralement JavaScript, qui est une technologie parfaitement accessible.</p>
+			<p>Pour chaque média non temporel, il est demandé à ce qu’une alternative accessible soit fournie. Une alternative accessible permet par exemple de s’assurer qu’un utilisateur qui ne peut pas utiliser de souris et qui navigue uniquement à l’aide du clavier puisse réaliser les mêmes actions qu’un utilisateur valide. Nous vous renvoyons au guide <a href="https://disic.github.io/guide-impacts_utilisateurs/multimedia.html#non-temporels">impacts utilisateurs des médias non temporels</a> pour en savoir plus.</p>
+			<p>L’utilisateur doit pouvoir atteindre l’alternative au média non temporel à l’aide d’un lien présent sur la même page. Ce lien devra être clairement identifiable et situé à proximité du contenu, et devra mener à l’alternative accessible. Cette alternative peut être contenue soit dans la page elle-même (le lien sera alors une ancre), soit dans une autre page.</p>
+
+		</article>
+	</main>
+
+	<aside role="complementary" id="footer-block" class="clear">
+		<div class="col-1-2">
+			<h2 id="ailleurs">Voir ailleurs / Ressources</h2>
+			<ul>
+				<li><a href="https://disic.github.io/guide-impacts_utilisateurs/multimedia.html">Impacts utilisateurs des défauts d’accessibilité en matière de multimédia</a></li>
+				<li><a href="http://disic.github.io/guide-contribuer_accessible/multimedia.html">«&nbsp;Fiche 4&nbsp;: Du multimédia pour tous et toutes&nbsp;»</a> du guide Contribuer accessible sur le web de manière accessible.</li>
+			</ul>
+
+			<h2 id="voir-aussi">Voir aussi</h2>
+			<ul>
+				<li><a href="http://www.fiphfp.fr/Temoignages/Temoignages-d-agents">Des exemples de vidéos accessibles sur le site du FIPHFP</a></li>
+				<li><a href="http://ics.utc.fr/capa/DOCS/SP4/Tuto/02/co/02-CAPA_BonnesPratiques_6.html">Bonnes pratiques pour l’accessibilité des vidéos (Sur le site de l’Unité ingénierie des contenus et savoirs)</a></li>
+				<li><a href="http://ics.utc.fr/capa/DOCS/SP4/Tuto/02/co/02-CAPA_BonnesPratiques_11.html">Bonnes pratiques pour l’accessibilité des fichiers sons (Sur le site de l’Unité ingénierie des contenus et savoirs)</a></li>
+				<li id="charte-sous-titres-france"><a href="http://www.csa.fr/Television/Le-suivi-des-programmes/L-accessibilite-des-programmes/Charte-relative-a-la-qualite-du-sous-titrage-a-destination-des-personnes-sourdes-ou-malentendantes-Decembre-2011">Charte relative à la qualité du sous-titrage à destination des personnes sourdes ou malentendantes - Décembre 2011</a></li>
+			</ul>
+		</div>
+		<div class="col-1-2">
+			<h2 id="criteres">Critères RGAA&nbsp;3</h2>
+			<ul>
+				<li>4.1 [A]</li>
+				<li>4.3 [AA]</li>
+				<li>4.5 [AA]</li>
+				<li>4.7 [AA]</li>
+				<li>4.9 [AAA]</li>
+				<li>4.15 [A]</li>
+				<li>4.16 [A]</li>
+				<li>4.18 [A]</li>
+				<li>4.19 [AAA]</li>
+			</ul>
+			<article class="article">	
+				<h2 id="note-concernant-les-niveaux-de-conformite">Note concernant les niveaux de conformité</h2>
+				<p>Selon le niveau de conformité au RGAA 3.0, les recommandations en termes d’accessibilité ne sont pas les mêmes pour les éléments multimédias de type vidéo ou audio. Ci-dessous nous résumons brièvement les exigences concernant cette problématique. Ce résumé ne remplace pas les recommandations énoncées dans le référentiel, auquel nous vous renvoyons pour plus de détails&nbsp;: <a href="https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#multimedia">critères de la thématique multimédia du RGAA 3.0</a>.</p>
+				<ul>
+					<li>Niveau A&nbsp;:
+						<ul>
+							<li>une transcription textuelle ou une audiodescription&nbsp;;</li>
+							<li>des sous-titres synchronisés.</li>
+						</ul>
+					</li>
+					<li>Niveau AA&nbsp;:
+						<ul>
+							<li>une transcription textuelle&nbsp;;</li>
+							<li>des sous-titres synchronisés&nbsp;;</li>
+							<li>une audiodescription synchronisée.</li>
+						</ul>
+					</li>
+					<li>Niveau AAA&nbsp;:
+						<ul>
+							<li>une transcription textuelle&nbsp;;</li>
+							<li>des sous-titres synchronisés&nbsp;;</li>
+							<li>une audiodescription&nbsp;;</li>
+							<li>une audiodescription étendue synchronisée&nbsp;;</li>
+							<li>une interprétation en langue des signes.</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+		</div>
+	</aside>
+
+	<footer id="footer" role="contentinfo" class="clear">
+		<h2>Licence d’utilisation</h2>
+		<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l’action publique"></a></p>
+		<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l’action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+	</footer>
+
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

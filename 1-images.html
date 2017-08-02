@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<title>Fiche 1 : Images - Guide du concepteur RGAA 3</title>
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="css/styles.css" media="all">
+		<link rel="stylesheet" href="css/print.css" media="print">
+		<script type="text/javascript" src="highlight/highlight.pack.js"></script>
+		<link rel="stylesheet" href="highlight/styles/tomorrow-night-eighties.css" media="all">
+		<script>hljs.initHighlightingOnLoad();</script>
+	</head>
+<body>
+
+<div class="main-header">
+	<div class="inside">
+		<ul class="skip-links">
+			<li><a href="#main">contenu</a></li>
+			<li><a href="#navigation">navigation</a></li>
+		</ul>
+		<header role="banner" class="header  clear" id="banner">
+			<h1 class="title">Guide du concepteur RGAA&nbsp;3</h1>
+		</header>
+
+		<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+			<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+			<ul class="sommaire is-hidden" id="sommaireToggle">
+				<li><a href="index.html">Introduction</a></li>
+				<li>
+					<a href="conception-fonctionnelle.html">Conception fonctionnelle</a>
+					<ul>
+						<li><a href="1-images.html">Fiche 1&nbsp;: Images</a></li>
+						<li><a href="2-tableaux.html">Fiche 2&nbsp;: Tableaux</a></li>
+						<li><a href="3-formulaires.html">Fiche 3&nbsp;: Formulaires</a></li>
+						<li><a href="4-navigation.html">Fiche 4&nbsp;: Navigation</a></li>
+						<li><a href="5-consultation.html">Fiche 5&nbsp;: Consultation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-graphique.html">Conception graphique</a>
+					<ul>
+						<li><a href="6-couleurs.html">Fiche 6&nbsp;: Couleurs</a></li>
+						<li><a href="7-presentation.html">Fiche 7&nbsp;: Présentation</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="conception-multimedia.html">Conception multimédia</a>
+					<ul>
+						<li><a href="8-multimedia.html">Fiche 8&nbsp;: Multimédia</a></li>
+					</ul>
+				</li>
+				<li><a href="glossaire.html">Glossaire</a></li>
+			</ul>
+		</nav>
+		<div class="github-link">
+			<p><a href="https://github.com/DISIC/guide-concepteur">Contribuer</a>
+			<a class="pdfdown" title="Télécharger le Guide du concepteur RGAA 3 (pdf, 1,6 Mo)" href="export/guide-concepteurs.pdf">Télécharger</a></p>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+
+	<nav role="navigation" class="internav clear">
+		<ul>
+			<li><a class="prev" href="conception-fonctionnelle.html"><span aria-hidden="true"> &laquo; </span>Conception fonctionnelle </a></li>
+			<li><a class="next" href="2-tableaux.html">Fiche 2&nbsp;: Tableaux <span aria-hidden="true"> &raquo; </span></a></li>
+		</ul>
+	</nav>
+
+	<main id="main" role="main">
+		<h1 class="fiche-title">Fiche 1&nbsp;: Images</h1>
+
+		<div class="bloc-haut">
+			<ul class="nav-context">
+				<li><a href="#introduction">Introduction - cas utilisateurs</a></li>
+				<li><a href="#captcha">Captcha</a></li>
+				<li><a href="#descriptiondetaillee">Description détaillée des images porteuses d’information complexe</a></li>
+				<li><a href="#ailleurs">Voir ailleurs / Ressources</a></li>
+				<li><a href="#criteres">Critères RGAA 3</a></li>
+			</ul>
+	
+			<aside role="complementary" class="clear resume">
+				<h2 id="resume">Synthèse</h2>
+				<ul>
+					<li>Prévoir une alternative au Captcha.</li>
+					<li>Prévoir une description détaillée adjacente aux images porteuses d’information complexe.</li>
+				</ul>
+			</aside>
+		</div>
+
+		<article class="enjeu article" id="introduction">
+			<h2 class="enjeu">Introduction - cas utilisateurs</h2>
+			<p>Les images véhiculent parfois une information importante. Cette information, qui peut aider à comprendre le contenu auquel elle se rapporte, doit pouvoir être accessible à tous.</p>
+			<p>Fournir une alternative aux images porteuses d’information est indispensable pour les utilisateurs qui ne perçoivent pas, ou perçoivent mal, le contenu visuel. C’est le cas des personnes aveugles ou malvoyantes. Un <a href="glossaire.html#lecteur-decran">lecteur d’écran</a> va pouvoir accéder à cette alternative et le restituer à l’utilisateur.</p>
+			<p>De même, pour les personnes qui présentent des difficultés de compréhension face à certaines représentations visuelles (iconographie, peintures, représentations multi-dimensionnelles, graphiques…), une alternative peut aider à en comprendre le sens ou à en extraire l’information importante.</p>
+			<p>Pour toutes ces raisons, il est essentiel de traduire de manière textuelle l’information nécessaire et suffisante qu’apportent les images.</p>
+			<p>Attention cependant&nbsp;: lorsque ces images constituent des liens, ce n’est alors plus l’information qu’elles véhiculent qui est essentielle, mais la fonction du lien qu’elles constituent. Dans cette situation, elles permettent aux logiciels pilotés à la voix par une personne en situation de handicap moteur, de localiser plus facilement le lien à activer.</p>
+		</article>
+
+		<article class="article" id="captcha">
+			<h2>Captcha</h2>
+			<p>Les images tests (Captcha) doivent posséder une alternative, mais contrairement aux images porteuses d’information, cette alternative ne doit pas décrire le contenu visible du Captcha, mais doit permettre à l’utilisateur de comprendre la nature et le rôle de l’image. En général, cette alternative est gérée pendant la phase de développement technique du site.</p>
+			<p>Lorsque le Captcha est une image, ce mécanisme peut être complété par une méthode alternative permettant à l’utilisateur de résoudre le test. Par exemple, si une <a href="glossaire.html#maquette-fonctionnelle-wireframe">maquette fonctionnelle</a> présente un Captcha image, il peut être utile de proposer l’implémentation d’une alternative sonore.</p>
+		</article>
+
+		<article class="article" id="descriptiondetaillee">
+			<h2>Description détaillée des images porteuses d’information complexe</h2>
+			<p>Le <a href="glossaire.html#texte-de-remplacement">texte de remplacement</a> n’est à utiliser que dans le cas d’images qu’il est simple de décrire en une phrase. Dans le cas d’une image complexe, qui demande la rédaction d’un paragraphe entier (par exemple un plan de quartier, un graphique, un histogramme), vous devez fournir une description détaillée. Vous pouvez par exemple indiquer ces textes alternatifs sous forme d’annotations sur vos maquettes, afin que les intégrateurs puissent facilement les prévoir dans leurs gabarits HTML.</p>
+			<p>Lorsqu’une image demande une description détaillée, il faut prévoir, sous cette image, un texte correctement structuré qui la décrit. Ce texte peut être un paragraphe, mais il peut également prendre d’autres formes. Par exemple, dans le cas d’un graphique complexe, la description détaillée pourrait reprendre l’information sous la forme d’un tableau ou d’une liste. C’est au concepteur fonctionnel de juger de la meilleure structuration possible pour que l’information soit correctement restituée, après consultation d’un intégrateur en cas de doute.</p>
+			<p>Pour permettre à un utilisateur de <a href="glossaire.html#lecteur-decran">lecteur d’écran</a> de faire le lien entre l’image et sa description détaillée, vous devrez préciser le titre de l’image au début de cette description détaillée. Par exemple, dans le cas d’un plan : <i>«&nbsp;Plan d’accès (description détaillée)&nbsp;: Pour accéder à…&nbsp;»</i>. Les intégrateurs ou contributeurs quant à eux s’assureront que la mention <i>Plan d’accès</i> se trouve dans le texte de remplacement, et seulement elle&nbsp;: en effet, il ne faut pas reprendre la description détaillée dans le texte de remplacement.</p>
+			<p>Une fois que cette description détaillée est prévue, il existe plusieurs façons de la traiter visuellement&nbsp;:</p>
+			<ul>
+				<li>soit on affiche cette description détaillée telle quelle sous l’image concernée&nbsp;;</li>
+				<li>soit on masque cette description détaillée par défaut, et on met en place un bouton sous l’image qui permettra à l’utilisateur d’afficher et de masquer la description détaillée si besoin&nbsp;;</li>
+				<li>soit on ajoute un lien adjacent juste après l’image&nbsp;: ce lien devrait être intitulé «&nbsp;Description détaillée&nbsp;», et devrait mener vers une page intitulée elle aussi «&nbsp;Description détaillée&nbsp;» qui contient la description détaillée de l’image correctement structurée. Cette page peut être intégrée dans le gabarit du site comme toutes les autres pages, mais il peut également s’agir d’une page blanche contenant uniquement ce texte-là&nbsp;: tout ce qui compte, c’est que la page contenant la description détaillée soit conforme au même titre que les autres pages. L’intitulé du lien menant à cette page ne doit surtout pas être remplacé par un intitulé abstrait de type «&nbsp;En savoir plus&nbsp;».</li>
+				<li>Il est également possible d’utiliser un attribut <code>longdesc</code> pendant la phase d’intégration.</li>
+			</ul>
+
+			<h3 id="exemple-dune-image-complexe-avec-une-description-détaillée">Exemple d’une image complexe avec une description détaillée</h3>
+			<p>Ci-dessous l’exemple d’une image complexe. Il s’agit d’un plan de localisation. Un <a href="glossaire.html#texte-de-remplacement">texte de remplacement</a> n’est pas suffisant pour retranscrire toute l’information présente sur ce plan. Il faut donc prévoir la présence de cette description détaillée dans les spécifications et sur les <a href="glossaire.html#maquette-fonctionnelle-wireframe">maquettes fonctionelles</a>.</p>
+			<div class="note clear">
+				<div class="col-1-2">
+					<p><img src="img/image-complexe.png" alt="Plan d’accès au Musée d’histoire naturelle"></p>
+				</div>
+				<div class="col-1-2">
+					<h4 id="description-détaillée-du-plan-daccès-au-musée-dhistoire-naturelle">Description détaillée du plan d’accès au musée d’histoire naturelle</h4>
+					<p>L’entrée du musée d’histoire naturelle est accessible depuis la rue Voltaire.</p>
+					<p>Depuis la rue Athénas, descendre vers la rue Voltaire et prendre sur la gauche, l’entrée du musée est située sur votre gauche.</p>
+					<p>Depuis la rue Lesage, descendre vers la rue Voltaire et prendre sur la droite, l’entrée du musée est située sur votre droite.</p>
+					<p>Depuis la Rue Marivaux, redescendre vers la rue Lesage, continuer tout droit pour atteindre la rue Voltaire, l’entrée du musée est située sur votre droite.</p>
+				</div>
+			</div>
+	</article>
+
+	</main>
+
+	<aside role="complementary" id="footer-block" class="clear">
+		<div class="col-1-2">
+			<h2 id="ailleurs">Voir ailleurs / Ressources</h2>
+			<ul>
+				<li><a href="https://disic.github.io/guide-impacts_utilisateurs/images.html">Impacts utilisateurs des défauts d’accessibilité des images</a></li>
+				<li><a href="http://disic.github.io/guide-contribuer_accessible/images.html">Fiche «&nbsp;Quand une image vaut mille mots&nbsp;» du guide Contribuer sur le web de manière accessible</a></li>
+			</ul>
+		</div>
+		<div class="col-1-2">
+			<h2 id="criteres">Critères RGAA 3</h2>
+			<ul>
+				<li>1.4 [A]</li>
+				<li>1.5 [A]</li>
+				<li>1.6 [A]</li>
+				<li>1.7 [A]</li>
+			</ul>
+		</div>
+	</aside>
+
+	<footer id="footer" role="contentinfo" class="clear">
+		<h2>Licence d’utilisation</h2>
+		<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l’action publique"></a></p>
+		<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l’action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+	</footer>
+
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
