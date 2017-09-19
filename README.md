@@ -17,7 +17,7 @@ Il n’est pas nécessaire de savoir lire ni écrire du code HTML pour utiliser 
 
 ## Consultation
 
-Vous pouvez [consulter ce guide en ligne](http://disic.github.io/guide-concepteur) ou le télécharger au format [ODT - 923 ko](https://github.com/DISIC/guide-concepteur/raw/master/export/guide-concepteur.odt) ou [PDF - 1,6 Mo](https://github.com/DISIC/guide-concepteur/raw/master/export/guide-concepteur.pdf)
+Vous pouvez [consulter ce guide en ligne](http://disic.github.io/guide-concepteur) ou le télécharger au format [ODT - 923 ko](https://github.com/DISIC/guide-concepteur/raw/master/export/guide-concepteurs.odt) ou [PDF - 1,6 Mo](https://github.com/DISIC/guide-concepteur/raw/master/export/guide-concepteurs.pdf)
 
 ## Licence d’utilisation
 
